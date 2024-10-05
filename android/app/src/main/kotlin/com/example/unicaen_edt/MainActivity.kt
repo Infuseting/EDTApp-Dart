@@ -1,4 +1,4 @@
-package com.example.unicaen_edt
+package fr.Infuseting.unicaen_edt
 
 import io.flutter.embedding.android.FlutterActivity
 

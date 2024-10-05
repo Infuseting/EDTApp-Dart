@@ -513,7 +513,7 @@ class _MyHomePageState extends State<MyHomePage> {
     if (await isUpdate(adeProjectID, adeResources)) {
       downloadAgendaData(adeProjectID, adeResources);
     {
-  }
+  }   
   loadAgenda(adeProjectID, adeResources);
 
     //Si il y a pas, on regarde si il y a de la co

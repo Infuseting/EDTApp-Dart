@@ -89,11 +89,11 @@ BEGIN
     BEGIN
         BLOCK "040904e4"
         BEGIN
-            VALUE "CompanyName", "com.example" "\0"
+            VALUE "CompanyName", "fr.Infuseting" "\0"
             VALUE "FileDescription", "unicaen_edt" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
             VALUE "InternalName", "unicaen_edt" "\0"
-            VALUE "LegalCopyright", "Copyright (C) 2024 com.example. All rights reserved." "\0"
+            VALUE "LegalCopyright", "Copyright (C) 2024 fr.Infuseting. All rights reserved." "\0"
             VALUE "OriginalFilename", "unicaen_edt.exe" "\0"
             VALUE "ProductName", "unicaen_edt" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
