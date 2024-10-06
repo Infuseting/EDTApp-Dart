@@ -18,6 +18,7 @@ function parse_event_data($docstring) {
     return $event_data;
 }
 function get_data($response) {
+    $list = [];
     $events = explode("BEGIN:VEVENT", $response);
     foreach ($events as $index => $value) {
         if ($index == 0) continue; // Skip the first split part if it's not an event
@@ -49,7 +50,8 @@ if (!file_exists("{$folderPath}/file.json")) {
 }
 $date = DateTime::createFromFormat('Y-m-d', $day);
 
-for ($i = 0; $i < 15; $i++) {
+header('Content-Type: application/json');
+for ($i = 0; $i < 30; $i++) {
     $file = file_get_contents("{$folderPath}/file.json");
     $data = json_decode($file, true);
 
@@ -72,39 +74,58 @@ for ($i = 0; $i < 15; $i++) {
         }
     }
     $response = get_data($response);
-    echo json_encode($response);
-    
-    
-    $query = http_build_query($params);
-    $request = $ade_univ . "?" . $query;
-    $response = file_get_contents($request);
-    if (isset($http_response_header) && $http_response_header[0] != 'HTTP/1.1 200 ') {
-        error_log("Error: received non-200 response code");
-    } else {
-        if (strpos($response, "Le projet est invalide") !== false || strpos($response, "BEGIN:VEVENT") === false) {
-            error_log("$adeBase:$adeResources return anything");
+    if (isset($data[$date->format('Y-m-d')])) {
+        if (isset($response[$date->format('Y-m-d')])) {
+            $contentWithoutSequence = array_map(function($event) {
+                unset($event['SEQUENCE']);
+                unset($event['DTSTAMP']);
+                unset($event['LAST-MODIFIED']);
+                return $event;
+            }, $data[$date->format('Y-m-d')]['content']);
+
+            $responseWithoutSequence = array_map(function($event) {
+                unset($event['SEQUENCE']);
+                unset($event['DTSTAMP']);
+                unset($event['LAST-MODIFIED']);
+                return $event;
+            }, $response[$date->format('Y-m-d')]);
+
+            // Debugging output
+            print(json_encode($responseWithoutSequence));
+            print("\n");
+            print(json_encode($contentWithoutSequence));
+            print("\n");
+            print("Comparison result: " . (json_encode($contentWithoutSequence) !== json_encode($responseWithoutSequence) ? "Same" : "Not Same"));
+            print("\n\n\n");
+        
+            if (json_encode($contentWithoutSequence) !== json_encode($responseWithoutSequence)) {
+                $data[$date->format('Y-m-d')]['content'] = $response[$date->format('Y-m-d')];
+                $data[$date->format('Y-m-d')]['lastUpdate'] = time();
+            }
         }
+        
+        else {
+            $data[$date->format('Y-m-d')]['content']  = [];
+            $data[$date->format('Y-m-d')]['lastUpdate'] = time();
+        }
+    } 
+    else{
+        $data[$date->format('Y-m-d')]['content']  = isset($response[$date->format('Y-m-d')]) ? $response[$date->format('Y-m-d')] : [];
+        $data[$date->format('Y-m-d')]['lastUpdate'] = time();
     }
-    $response = get_data($response, $date->format('Y-m-d'));  
-    echo json_encode($response);
+    file_put_contents("{$folderPath}/file.json", json_encode($data, JSON_UNESCAPED_UNICODE));
+    $date->modify('+1 day');
 }
 
+$date = DateTime::createFromFormat('Y-m-d', $day);
+$result = [];
+for ($i = 0; $i < 15; $i++) {
+    $file = file_get_contents("{$folderPath}/file.json");
+    $data = json_decode($file, true);
+    if (isset($data[$date->format('Y-m-d')]) && $lastUpdate < $data[$date->format('Y-m-d')]['lastUpdate']) {
+        $result[$date->format('Y-m-d')] = $data[$date->format('Y-m-d')];
+    }
+    $date->modify('+1 day');
+}
+echo json_encode($result, JSON_UNESCAPED_UNICODE);
 
-header('Content-Type: application/json');
-echo json_encode(['update' => true]);
-?>
-
-
-<!-- 
-On get les paramètres de l'url
-On vérifie si les paramètres sont null, si oui on renvoie une erreur 400
-Si le fichier correspondant n'existe pas, on le telecharge
-
-Si il y a une modification du fichier au moment de la verif on update le fichier et dans un fichier .txt on rajoute a la dernière ligne le UNIX timestamp
-On limite a une requete pour les paramètres adeBase et adeRessources similaire une fois toute les 5 minutes max.
-On renvoie true si le dernier timestamp est superieur a lastUpdate
-
-Dans ce même fichier json on sauvegarde jour par jour les cours par exemple "28-08-2024" : [ { "debut" : "08:00", "fin" : "10:00", "nom" : "Maths", "prof" : "M. Dupont", "salle" : "A101" } ]
-
-
---> 
