@@ -89,7 +89,7 @@ class _AgendaPageState extends State<AgendaPage> {
                   String format = DateFormat('yyyy-MM-dd').format(currentDay);
                   var dayEvents = save[format];
                   if (dayEvents != null && dayEvents.isNotEmpty && dayEvents['content'].isNotEmpty) {
-                    DateTime timeLast = DateTime(now.year, now.month, now.day, 8, 0, 0);
+                    DateTime timeLast = DateTime(currentDay.year, currentDay.month, currentDay.day, 6, 0, 0);
                     String dayName = DateFormat('EEEE').format(currentDay);
                     String formattedDate = DateFormat('d/M/yyyy').format(currentDay);
                     return Container( 
@@ -140,19 +140,14 @@ class _AgendaPageState extends State<AgendaPage> {
                           ),
                           child: Column(
                           children: dayEvents['content'].map<Widget>((event) {
-                            print('Event: $event');
                             Pair<Color, Color> colorPair = colorChooser(event);
                             Color colorFirst = colorPair.first;
                             Color colorScnd = colorPair.second;
-                            print("Color first: $colorFirst");
-                            print("Color second: $colorScnd");
                             double calculatedHeight = heightCalc(event);
-                            print("Calculated height: $calculatedHeight");
-                           
+
                             var results = topCalc(event, timeLast);
                             timeLast = results[1];
                             double topPadding = results[0];
-                            print(event["SUMMARY"]);
                             return Padding(
                             padding: EdgeInsets.only(top: topPadding > 0 ? topPadding : 0),
                             child: GestureDetector(
@@ -248,15 +243,11 @@ class _AgendaPageState extends State<AgendaPage> {
   }
 
   String formatDateFromTimeStamp(int timestamp) {
-    print("Formatting timestamp: $timestamp");
     DateTime dateTime = DateTime.fromMillisecondsSinceEpoch(timestamp);
-    print("Converted timestamp to DateTime: $dateTime");
 
     DateFormat dateFormat = DateFormat('yyyy-MM-dd HH:mm:ss');
-    print("Created DateFormat: $dateFormat");
 
     String formattedDate = dateFormat.format(dateTime);
-    print("Formatted DateTime to String: $formattedDate");
 
     return formattedDate;
   }
@@ -290,7 +281,6 @@ class _AgendaPageState extends State<AgendaPage> {
 
   int getCurrentTimestamp() {
     int timestamp = DateTime.now().millisecondsSinceEpoch;
-    print("Current timestamp: $timestamp");
     return timestamp;
   }
 
@@ -310,25 +300,19 @@ class _AgendaPageState extends State<AgendaPage> {
 
 
   DateTime parseTimestampISO(String timestamp) {
-    print("Parsing ISO timestamp: $timestamp");
     return DateFormat("yyyy-MM-dd HH:mm:ss").parse(timestamp);
   }
   
   int compareTimestamps(int timestamp1, String timestamp2) {
-    print("Comparing timestamps: $timestamp1 and $timestamp2");
     DateTime time1 = DateTime.fromMillisecondsSinceEpoch(timestamp1);
     DateTime time2 = parseTimestampRQST(timestamp2);
     time2 = time2.add(Duration(hours: 2));
-    print(time1);
-    print(time2);
     return time1.compareTo(time2);
   }
 
   double heightCalc(dynamic event) {
     DateTime startTime = DateFormat("HH:mm").parse(parseTime(event["DTSTART"]!));
-    print("Start time: $startTime");
     DateTime endTime = DateFormat("HH:mm").parse(parseTime(event["DTEND"]!));
-    print("Start time: $endTime");
     int duration = endTime.difference(startTime).inMinutes;
     return duration.toDouble();
   }
@@ -341,7 +325,9 @@ class _AgendaPageState extends State<AgendaPage> {
     print("End time: $endTime");
     
     DateTime adjustedStartTime = startTime.subtract(Duration(hours: 8));
+    print(adjustedStartTime);
     DateTime adjustedLastEndTime = lastEndTime.subtract(Duration(hours: 6));
+    print(adjustedLastEndTime);
     
     int startMinutes = adjustedStartTime.hour * 60 + adjustedStartTime.minute;
     int lastEndMinutes = adjustedLastEndTime.hour * 60 + adjustedLastEndTime.minute;
