@@ -3,15 +3,22 @@ function parse_event_data($docstring) {
     $data = explode("\n", trim($docstring));
     $event_data = [];
     $tempKey = '';
-
-    foreach ($data as $line) {
-        $line = explode("(Exporté le:", $line)[0];
-        if (strpos($line, ":") !== false) {
+    $stop = 0;
+    foreach ($data as $lines) {
+        $line = explode("(Exporté le:", $lines)[0];
+        
+        if (strpos($line, ":") !== false && preg_match('/^(DTSTART|DTEND|SUMMARY|LOCATION|DESCRIPTION|UID|CREATED|END|SEQUENCE|DTSTAMP|LAST-MODIFIED)/', $line)) {
             list($key, $value) = explode(":", $line, 2);
             $tempKey = $key;
+            $stop = 0;
             $event_data[trim($key)] = trim($value);
         } else {
-            $event_data[trim($tempKey)] .= '' . trim($line);
+            if ($stop != 1) {
+                $event_data[trim($tempKey)] .= '' . trim($line);
+            }
+        }
+        if (strpos($lines, "(Exporté le:") !== false) {
+            $stop = 1;
         }
     }
 
@@ -34,8 +41,7 @@ function get_data($response) {
 $adeBase = $_GET['adeBase'] ?? null;
 $adeRessources = $_GET['adeRessources'] ?? null;
 $lastUpdate = $_GET['lastUpdate'] ?? null;
-$day = $_GET['day'] ?? null;
-
+$day = $_GET['date'] ?? null;
 
 if ($adeBase === null || $adeRessources === null || $lastUpdate === null || $day === null) {
     http_response_code(400);
@@ -90,24 +96,13 @@ for ($i = 0; $i < 30; $i++) {
                 return $event;
             }, $response[$date->format('Y-m-d')]);
 
-            // Debugging output
-            print(json_encode($responseWithoutSequence));
-            print("\n");
-            print(json_encode($contentWithoutSequence));
-            print("\n");
-            print("Comparison result: " . (json_encode($contentWithoutSequence) !== json_encode($responseWithoutSequence) ? "Same" : "Not Same"));
-            print("\n\n\n");
-        
+            
             if (json_encode($contentWithoutSequence) !== json_encode($responseWithoutSequence)) {
                 $data[$date->format('Y-m-d')]['content'] = $response[$date->format('Y-m-d')];
                 $data[$date->format('Y-m-d')]['lastUpdate'] = time();
             }
         }
         
-        else {
-            $data[$date->format('Y-m-d')]['content']  = [];
-            $data[$date->format('Y-m-d')]['lastUpdate'] = time();
-        }
     } 
     else{
         $data[$date->format('Y-m-d')]['content']  = isset($response[$date->format('Y-m-d')]) ? $response[$date->format('Y-m-d')] : [];
@@ -116,13 +111,16 @@ for ($i = 0; $i < 30; $i++) {
     file_put_contents("{$folderPath}/file.json", json_encode($data, JSON_UNESCAPED_UNICODE));
     $date->modify('+1 day');
 }
-
+   
 $date = DateTime::createFromFormat('Y-m-d', $day);
 $result = [];
 for ($i = 0; $i < 15; $i++) {
     $file = file_get_contents("{$folderPath}/file.json");
     $data = json_decode($file, true);
     if (isset($data[$date->format('Y-m-d')]) && $lastUpdate < $data[$date->format('Y-m-d')]['lastUpdate']) {
+        usort($data[$date->format('Y-m-d')]['content'], function($a, $b) {
+            return strtotime($a['DTSTART']) - strtotime($b['DTSTART']);
+        });
         $result[$date->format('Y-m-d')] = $data[$date->format('Y-m-d')];
     }
     $date->modify('+1 day');

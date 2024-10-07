@@ -125,8 +125,18 @@ class _SettingsPageState extends State<SettingsPage> {
                     SizedBox(height: 8.0),
                     Divider(color: secondaryColor),
                     SizedBox(height: 8.0),
-                    Text('Define Start and End time for notifications',
-                        style: TextStyle(color: secondaryColor)),
+                    Text(
+                      'Define Start and End time for notifications',
+                      style: TextStyle(color: secondaryColor),
+                    ),
+                    Text(
+                        'Average data consumption per month : ${(31.0 * ((endTime - startTime) / (requestPerMinute / 60.0))).toInt()}KB',
+                      style: TextStyle(color: secondaryColor),
+                    ),
+                    Text(
+                      'Information will be based on you\'re parameter and can be different from the real data consumption (it\'s an minimum estimation)',
+                      style: TextStyle(color: secondaryColor),
+                    ),
                     Container(
                       child: RangeSlider(
                         values: RangeValues(
@@ -157,6 +167,7 @@ class _SettingsPageState extends State<SettingsPage> {
                     SizedBox(height: 8.0),
                     Text('Time between two requests in minutes',
                         style: TextStyle(color: secondaryColor)),
+                    
                     Container(
                       child: Slider(
                         value: requestPerMinute.toDouble(),

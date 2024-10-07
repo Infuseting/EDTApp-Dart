@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'util/cacheManager.dart';
@@ -7,20 +6,52 @@ import 'dart:convert';
 import 'SettingsPage.dart';
 import 'util/darkMode.dart';
 import 'package:intl/intl.dart';
-Future<bool> isUpdate(int adeProjectID, int adeResources) async {
+import 'AgendaPage.dart';
+//import 'package:workmanager/workmanager.dart';
+//import 'package:flutter_local_notifications/flutter_local_notifications.dart';
+
+Future<void> checkUpdate(int adeProjectID, int adeResources) async {
   try {
     String key = "$adeProjectID-$adeResources";
     int? lastUpdate = await CacheHelper.getLastUpdate(key);
     String date = DateFormat('yyyy-MM-dd').format(DateTime.now());
-    final result = await http.get(Uri.parse('$baseUrl/update/?adeBase=$adeProjectID&adeRessources=$adeResources&lastUpdate=$lastUpdate&day=$date'));
+    print(Uri.parse('$baseUrl/update/?adeBase=$adeProjectID&adeRessources=$adeResources&lastUpdate=$lastUpdate&date=$date'));
+    final result = await http.get(Uri.parse('$baseUrl/update/?adeBase=$adeProjectID&adeRessources=$adeResources&lastUpdate=$lastUpdate&date=$date'));
     if (result.statusCode == 200) {
       final jsonResponse = json.decode(result.body);
-      return jsonResponse['update'];
+      dynamic jsonFile;
+      String? save =  await CacheHelper.getSave(key);
+
+      if (save != null) {
+        jsonFile = json.decode(save);
+        if (!jsonResponse.isEmpty) {
+            jsonResponse.forEach((key, value) {
+              DateTime dateKey = DateTime.parse(key);
+              if (dateKey.isBefore(DateTime.now().subtract(Duration(days: 1)))) {
+                jsonFile.remove(key);
+              } else {
+                jsonFile[key] = value;
+              }
+            });
+        }
+        
+          
+      }
+      else {
+        jsonFile = jsonResponse;
+      }
+      await CacheHelper.addSave(key, jsonEncode(jsonFile)); 
+      await CacheHelper.setLastUpdate(key, DateTime.now().millisecondsSinceEpoch);
+
+      
+      
+    }
+    else {
+      print('Failed to load data $result.statusCode');
     }
     
-    return true;
   } catch (_) {
-    return true;
+    print('Failed to load data $_');
   }
 }
 Future<bool> hasInternetConnection() async {
@@ -41,16 +72,96 @@ Future<Map<String, dynamic>> fetchJsonData(String url) async {
   }
 }
 
-void main() {
+//void callbackDispatcher() {
+//  Workmanager().executeTask((task, inputData) async {
+//    List<dynamic> favs = await CacheHelper.getAllFromFav();
+//    bool notif = false;
+//    for (var item in favs) {
+//      try {
+//        int adeProjectID = item['adeProjectId'];
+//        int adeResources = item['adeResources'];
+//        String key = "$adeProjectID-$adeResources";
+//        int? lastUpdate = await CacheHelper.getLastUpdate(key);
+//        String date = DateFormat('yyyy-MM-dd').format(DateTime.now());
+//        debugPrint(Uri.parse('$baseUrl/update/?adeBase=$adeProjectID&adeRessources=$adeResources&lastUpdate=$lastUpdate&date=$date').toString());
+//        final result = await http.get(Uri.parse('$baseUrl/update/?adeBase=$adeProjectID&adeRessources=$adeResources&lastUpdate=$lastUpdate&date=$date'));
+//        if (result.statusCode == 200) {
+//          final jsonResponse = json.decode(result.body);
+//          dynamic jsonFile;
+//          String? save = await CacheHelper.getSave(key);
+//          
+//          if (save != null) {
+//            jsonFile = json.decode(save);
+//            if (jsonResponse.isNotEmpty) {
+//              notif = true;
+//              jsonResponse.forEach((key, value) {
+//                DateTime dateKey = DateTime.parse(key);
+//                if (dateKey.isBefore(DateTime.now().subtract(Duration(days: 1)))) {
+//                  jsonFile.remove(key);
+//                } else {
+//                  jsonFile[key] = value;
+//                }
+//              });
+//            }
+//          } else {
+//            jsonFile = jsonResponse;
+//          }
+//          await CacheHelper.addSave(key, jsonEncode(jsonFile));
+//          await CacheHelper.setLastUpdate(key, DateTime.now().millisecondsSinceEpoch);
+//        } else {
+//          debugPrint('Failed to load data ${result.statusCode}');
+//        }
+//      } catch (e) {
+//        debugPrint('Failed to load data $e');
+//      }
+//    }
+//    
+//    if (notif) {
+//      FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
+//      var android = AndroidInitializationSettings('@mipmap/ic_launcher');
+//      var iOS = IOSInitializationSettings();
+//      var initSettings = InitializationSettings(android: android, iOS: iOS);
+//      flutterLocalNotificationsPlugin.initialize(initSettings);
+//
+//      var androidDetails = AndroidNotificationDetails('channelId', 'channelName', 'channelDescription');
+//      var iOSDetails = IOSNotificationDetails();
+//      var generalNotificationDetails = NotificationDetails(android: androidDetails, iOS: iOSDetails);
+//
+//      await flutterLocalNotificationsPlugin.show(
+//        0,
+//        'Ton emploi du temps a été mis à jour ☺',
+//        'Clique pour voir les changements !',
+//        generalNotificationDetails,
+//      );
+//    }
+//    return Future.value(true);
+//  });
+//}
+void main() async {
+  //WidgetsFlutterBinding.ensureInitialized();
+  //int TBTR = await CacheHelper.getRequestPerMinute() ?? 15; // Time between two requests
+//
+  //Workmanager().initialize(
+  //  callbackDispatcher,
+  //  isInDebugMode: true,
+  //);
+//
+  //Workmanager().registerPeriodicTask(
+  //  "1",
+  //  "simplePeriodicTask",
+  //  frequency: Duration(minutes: TBTR), // Set your desired interval here
+  //  inputData: {},
+  //);
+//
   runApp(const MyApp());
 }
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
+    
     return MaterialApp(
       title: 'Unicaen - EDT',
       theme: ThemeData(
@@ -73,6 +184,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Unicaen - EDT'),
+
     );
   }
 }
@@ -498,37 +610,34 @@ class _MyHomePageState extends State<MyHomePage> {
       },
     );
   }
+  void loadAgenda(int adeProjectID, int adeResources) {
+    // Implement your logic to load and display the agenda here.
+    // This function should handle the UI and data fetching for the agenda.
+    // For example, you might navigate to a new screen that displays the agenda.
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => AgendaPage(adeProjectID: adeProjectID, adeResources: adeResources),
+      ),
+    );
+  }
   Future<void> agendaOpen(int adeProjectID, int adeResources) async {
   //On download 30 cours mais on en affiche que 15 donc on verifie que les 15 derniers cours.
-  String key = "$adeProjectID-$adeResources";
-  if (await CacheHelper.existSave(key)) {    
-    if (await  hasInternetConnection()) {
-      downloadAgendaData(adeProjectID, adeResources);
+    String key = "$adeProjectID-$adeResources";
+    if (await CacheHelper.existSave(key)) {    
+      if (await hasInternetConnection()) {
+        await checkUpdate(adeProjectID, adeResources);
+      }
     }
     else {
-      return;
-    }
+      if (await hasInternetConnection()) {
+        await checkUpdate(adeProjectID, adeResources);
+      }
+      else {
+        return;
+      }
+    }   
+    loadAgenda(adeProjectID, adeResources);
   }
-  else {
-    if (await isUpdate(adeProjectID, adeResources)) {
-      downloadAgendaData(adeProjectID, adeResources);
-    {
-  }   
-  loadAgenda(adeProjectID, adeResources);
-
-    //Si il y a pas, on regarde si il y a de la co
-
-      //Si il y a pas de co on retourne au Home
-
-      //Si il y a de la co on download le fichier
-
-    //Si il y a une save, on utilise l'api pour checker si y a update ou non (Pensais a faire un systeme si l'API est down pour forcer le telechargement)
-
-      //Si il y a eu une update on fait une mise a jour du fichier
-
-      //Si il n'y a pas eu de mise a jour on ne fait pas l'update
-  //On affiche l'agenda
-    }
-  }
-}
+  
 }
