@@ -50,7 +50,7 @@ class CacheHelper {
   static Future<void> setLastUpdate(String key, int value) async {
     final prefs = await SharedPreferences.getInstance();
     //print('adding to fav $key');
-    await prefs.setInt('$key-lastUpdate', value);
+    await prefs.setInt('$key-lastUpdate', (value / 1000).toInt());
   }
   static Future<int?> getLastUpdate(String key) async {
     final prefs = await SharedPreferences.getInstance();

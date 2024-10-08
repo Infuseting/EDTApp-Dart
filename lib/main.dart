@@ -38,7 +38,7 @@ Future<void> checkUpdate(int adeProjectID, int adeResources) async {
         jsonFile = jsonResponse;
       }
       await CacheHelper.addSave(key, jsonEncode(jsonFile)); 
-      await CacheHelper.setLastUpdate(key, (DateTime.now().millisecondsSinceEpoch / 1000).toInt());
+      await CacheHelper.setLastUpdate(key, DateTime.now().millisecondsSinceEpoch);
 
       
       
