@@ -39,8 +39,6 @@ dependencies:
   shared_preferences: ^2.0.13
   http: ^0.13.4
   intl: ^0.17.0
-  #workmanager: ^0.4.1
-  #flutter_local_notifications: ^8.2.0
 
 dev_dependencies:
   flutter_test:

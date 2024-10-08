@@ -7,9 +7,6 @@ import 'SettingsPage.dart';
 import 'util/darkMode.dart';
 import 'package:intl/intl.dart';
 import 'AgendaPage.dart';
-//import 'package:workmanager/workmanager.dart';
-//import 'package:flutter_local_notifications/flutter_local_notifications.dart';
-
 Future<void> checkUpdate(int adeProjectID, int adeResources) async {
   try {
     String key = "$adeProjectID-$adeResources";
@@ -41,7 +38,7 @@ Future<void> checkUpdate(int adeProjectID, int adeResources) async {
         jsonFile = jsonResponse;
       }
       await CacheHelper.addSave(key, jsonEncode(jsonFile)); 
-      await CacheHelper.setLastUpdate(key, DateTime.now().millisecondsSinceEpoch);
+      await CacheHelper.setLastUpdate(key, (DateTime.now().millisecondsSinceEpoch / 1000).toInt());
 
       
       
@@ -56,7 +53,7 @@ Future<void> checkUpdate(int adeProjectID, int adeResources) async {
 }
 Future<bool> hasInternetConnection() async {
   try {
-    final result = await http.get(Uri.parse('https://www.google.com'));
+    final result = await http.get(Uri.parse('https://edt.infuseting.fr'));
     return result.statusCode == 200;
   } catch (_) {
     return false;
@@ -72,87 +69,8 @@ Future<Map<String, dynamic>> fetchJsonData(String url) async {
   }
 }
 
-//void callbackDispatcher() {
-//  Workmanager().executeTask((task, inputData) async {
-//    List<dynamic> favs = await CacheHelper.getAllFromFav();
-//    bool notif = false;
-//    for (var item in favs) {
-//      try {
-//        int adeProjectID = item['adeProjectId'];
-//        int adeResources = item['adeResources'];
-//        String key = "$adeProjectID-$adeResources";
-//        int? lastUpdate = await CacheHelper.getLastUpdate(key);
-//        String date = DateFormat('yyyy-MM-dd').format(DateTime.now());
-//        debugPrint(Uri.parse('$baseUrl/update/?adeBase=$adeProjectID&adeRessources=$adeResources&lastUpdate=$lastUpdate&date=$date').toString());
-//        final result = await http.get(Uri.parse('$baseUrl/update/?adeBase=$adeProjectID&adeRessources=$adeResources&lastUpdate=$lastUpdate&date=$date'));
-//        if (result.statusCode == 200) {
-//          final jsonResponse = json.decode(result.body);
-//          dynamic jsonFile;
-//          String? save = await CacheHelper.getSave(key);
-//          
-//          if (save != null) {
-//            jsonFile = json.decode(save);
-//            if (jsonResponse.isNotEmpty) {
-//              notif = true;
-//              jsonResponse.forEach((key, value) {
-//                DateTime dateKey = DateTime.parse(key);
-//                if (dateKey.isBefore(DateTime.now().subtract(Duration(days: 1)))) {
-//                  jsonFile.remove(key);
-//                } else {
-//                  jsonFile[key] = value;
-//                }
-//              });
-//            }
-//          } else {
-//            jsonFile = jsonResponse;
-//          }
-//          await CacheHelper.addSave(key, jsonEncode(jsonFile));
-//          await CacheHelper.setLastUpdate(key, DateTime.now().millisecondsSinceEpoch);
-//        } else {
-//          debugPrint('Failed to load data ${result.statusCode}');
-//        }
-//      } catch (e) {
-//        debugPrint('Failed to load data $e');
-//      }
-//    }
-//    
-//    if (notif) {
-//      FlutterLocalNotificationsPlugin flutterLocalNotificationsPlugin = FlutterLocalNotificationsPlugin();
-//      var android = AndroidInitializationSettings('@mipmap/ic_launcher');
-//      var iOS = IOSInitializationSettings();
-//      var initSettings = InitializationSettings(android: android, iOS: iOS);
-//      flutterLocalNotificationsPlugin.initialize(initSettings);
-//
-//      var androidDetails = AndroidNotificationDetails('channelId', 'channelName', 'channelDescription');
-//      var iOSDetails = IOSNotificationDetails();
-//      var generalNotificationDetails = NotificationDetails(android: androidDetails, iOS: iOSDetails);
-//
-//      await flutterLocalNotificationsPlugin.show(
-//        0,
-//        'Ton emploi du temps a été mis à jour ☺',
-//        'Clique pour voir les changements !',
-//        generalNotificationDetails,
-//      );
-//    }
-//    return Future.value(true);
-//  });
-//}
-void main() async {
-  //WidgetsFlutterBinding.ensureInitialized();
-  //int TBTR = await CacheHelper.getRequestPerMinute() ?? 15; // Time between two requests
-//
-  //Workmanager().initialize(
-  //  callbackDispatcher,
-  //  isInDebugMode: true,
-  //);
-//
-  //Workmanager().registerPeriodicTask(
-  //  "1",
-  //  "simplePeriodicTask",
-  //  frequency: Duration(minutes: TBTR), // Set your desired interval here
-  //  inputData: {},
-  //);
-//
+void main() {
+
   runApp(const MyApp());
 }
 class MyApp extends StatelessWidget {
@@ -206,7 +124,7 @@ class MyHomePage extends StatefulWidget {
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
-String baseUrl = "https://edt.galade.fr";
+String baseUrl = "https://edt.infuseting.fr";
 class _MyHomePageState extends State<MyHomePage> {
   
   late bool isDarkMode;
