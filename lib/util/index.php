@@ -99,14 +99,14 @@ for ($i = 0; $i < 30; $i++) {
             
             if (json_encode($contentWithoutSequence) !== json_encode($responseWithoutSequence)) {
                 $data[$date->format('Y-m-d')]['content'] = $response[$date->format('Y-m-d')];
-                $data[$date->format('Y-m-d')]['lastUpdate'] = time();
+                $data[$date->format('Y-m-d')]['lastUpdate'] = round(microtime(true) * 1000);
             }
         }
         
     } 
     else{
         $data[$date->format('Y-m-d')]['content']  = isset($response[$date->format('Y-m-d')]) ? $response[$date->format('Y-m-d')] : [];
-        $data[$date->format('Y-m-d')]['lastUpdate'] = time();
+        $data[$date->format('Y-m-d')]['lastUpdate'] = round(microtime(true) * 1000);
     }
     file_put_contents("{$folderPath}/file.json", json_encode($data, JSON_UNESCAPED_UNICODE));
     $date->modify('+1 day');
