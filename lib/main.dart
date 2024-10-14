@@ -3,6 +3,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'util/cacheManager.dart';
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'package:universal_html/js.dart' as js;
 import 'SettingsPage.dart';
 import 'util/darkMode.dart';
 import 'package:intl/intl.dart';
@@ -170,7 +171,6 @@ class _MyHomePageState extends State<MyHomePage> {
       secondaryColor = settings[2] as Color;
     });
   }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -178,7 +178,7 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: secondaryColor,
         centerTitle: true,
         title: Text(
-          widget.title,
+          widget.title ,
           style: TextStyle(color: primaryColor),
         ),
         leading: IconButton(
@@ -254,40 +254,82 @@ class _MyHomePageState extends State<MyHomePage> {
                         child: Column(
                           children: [
                             SizedBox(
-                              child: favList(),
-                            ),
-                            SizedBox(
                               width: 400,
-                              child: buildDropdownMenu(
-                                  'Salle', salleData, 'salle', this),
-                            ),
-                            const SizedBox(height: 10),
-                            SizedBox(
-                              width: 400,
-                              child: buildDropdownMenu(
-                                  'Professeur', profData, 'prof', this),
-                            ),
-                            ...univData.map<Widget>((univ) {
-                              return Column(
-                                children: [
-                                  const SizedBox(height: 10),
-                                  SizedBox(
-                                    width: 400,
-                                    child: buildDropdownMenu(univ['nameUniv'],
-                                        univ['timetable'], 'univ', this),
-                                  ),
+                              child: ListTile(
+                                title: Row(
+                                  children: [
+                                    Expanded(
+                                    child: Center(
+                                      child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                        Icon(
+                                        Icons.download,
+                                        color: secondaryColor,
+                                        ),
+                                        SizedBox(width: 10), // Add some spacing between the icon and text
+                                        Text(
+                                        'Install APP', // Replace 'name' with a defined string
+                                        style: TextStyle(color: secondaryColor),
+                                        maxLines: 2,
+                                        overflow: TextOverflow.ellipsis,
+                                        ),
+                                      ],
+                                      ),
+                                    ),
+                                    ),
                                 ],
-                              );
-                            }).toList(),
+                              ),
+                              onTap: () {
+                                bool isStandalone = js.context.callMethod('isStandalone');
+                                if (!isStandalone) {
+                                  js.context.callMethod("launchApp");
+                                }
+                              },
+                            ),
+                            ),
+                        
                           ],
                         ),
                       ),
+                      
+
+                      SizedBox(
+                        child: favList(),
+                      ),
+                      SizedBox(
+                        width: 400,
+                        child: buildDropdownMenu(
+                            'Salle', salleData, 'salle', this),
+                      ),
+                      const SizedBox(height: 10),
+                      SizedBox(
+                        width: 400,
+                        child: buildDropdownMenu(
+                            'Professeur', profData, 'prof', this),
+                      ),
+                      ...univData.map<Widget>((univ) {
+                        return Column(
+                          children: [
+                            const SizedBox(height: 10),
+                            SizedBox(
+                              width: 400,
+                              child: buildDropdownMenu(univ['nameUniv'],
+                                  univ['timetable'], 'univ', this),
+                            ),
+                          ],
+                        );
+                      }).toList(),
                     ],
                   ),
                 ),
-              )
-            ],
-          ),
+              ),
+              ],
+            ),
+            
+            
+
+            
         ),
       ),
       backgroundColor: primaryColor,

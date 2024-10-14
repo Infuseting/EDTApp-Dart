@@ -52,6 +52,12 @@
         });
       }
     }
+    function isStandalone() {
+      return (window.matchMedia('(display-mode: standalone)').matches) || (window.navigator.standalone === true);
+    }
+    function getVersion() {
+      return window.localStorage.getItem('version').split(':')[1].replaceAll('"', '');
+    }
   </script>
   <script>
     if ('serviceWorker' in navigator) {

@@ -52,7 +52,7 @@ class _SettingsPageState extends State<SettingsPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          'Settings',
+          'Settings | Version : ' + js.context.callMethod('getVersion'),
           style: TextStyle(color: primaryColor),
         ),
         backgroundColor: secondaryColor,
@@ -72,14 +72,18 @@ class _SettingsPageState extends State<SettingsPage> {
               ? Center(child: CircularProgressIndicator())
               : Column(
                   children: <Widget>[
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        Text('Dark Mode',
+                    Expanded(
+                      child: SingleChildScrollView(
+                      child: Column(
+                        children: <Widget>[
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: <Widget>[
+                          Text('Dark Mode',
                             style: TextStyle(color: secondaryColor)),
-                        Switch(
-                          value: isDarkMode,
-                          onChanged: (bool value) {
+                          Switch(
+                            value: isDarkMode,
+                            onChanged: (bool value) {
                             setState(() {
                               isDarkMode = value;
                             });
@@ -88,139 +92,143 @@ class _SettingsPageState extends State<SettingsPage> {
                             Navigator.pushReplacement(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => SettingsPage()),
+                                builder: (context) => SettingsPage()),
                             );
-                          },
+                            },
+                          ),
+                          ],
                         ),
-                      ],
-                    ),
-                    SizedBox(height: 8.0),
-                    Divider(color: secondaryColor),
-                    SizedBox(height: 8.0),
-                    Text('Notification Delay (days)',
-                        style: TextStyle(color: secondaryColor)),
-                    Container(
-                      child: Slider(
-                        value: notificationDelay.toDouble(),
-                        inactiveColor: secondaryColor,
-                        onChanged: (double value) {
-                          setState(() {
+                        SizedBox(height: 8.0),
+                        Divider(color: secondaryColor),
+                        SizedBox(height: 8.0),
+                        Text('Notification Delay (days)',
+                          style: TextStyle(color: secondaryColor)),
+                        Container(
+                          child: Slider(
+                          value: notificationDelay.toDouble(),
+                          inactiveColor: secondaryColor,
+                          onChanged: (double value) {
+                            setState(() {
                             notificationDelay = value.toInt();
-                          });
+                            });
 
-                          CacheHelper.setNotificationDelay(value.toInt());
-                        },
-                        min: 1,
-                        max: 10,
-                        divisions: 9,
-                        label: '${notificationDelay} days',
-                      ),
-                    ),
-                    SizedBox(height: 16.0),
-                    Text(
-                      'Maximum: ${notificationDelay} day(s)\nThis parameter corresponds to the maximum number of days you can receive a notification in case of a course change.',
-                      style: TextStyle(color: secondaryColor),
-                      textAlign: TextAlign.center,
-                    ),
-                    SizedBox(height: 8.0),
-                    Divider(color: secondaryColor),
-                    SizedBox(height: 8.0),
-                    Text(
-                      'Define Start and End time for notifications',
-                      style: TextStyle(color: secondaryColor),
-                    ),
-                    Text(
-                        'Average data consumption per month : ${(31.0 * ((endTime - startTime) / (requestPerMinute / 60.0))).toInt()}KB',
-                      style: TextStyle(color: secondaryColor),
-                    ),
-                    Text(
-                      'Information will be based on you\'re parameter and can be different from the real data consumption (it\'s an minimum estimation)',
-                      style: TextStyle(color: secondaryColor),
-                    ),
-                    Container(
-                      child: RangeSlider(
-                        values: RangeValues(
-                          startTime.toDouble(),
-                          endTime.toDouble(),
+                            CacheHelper.setNotificationDelay(value.toInt());
+                          },
+                          min: 1,
+                          max: 10,
+                          divisions: 9,
+                          label: '${notificationDelay} days',
+                          ),
                         ),
-                        onChanged: (RangeValues values) {
-                          setState(() {
+                        SizedBox(height: 16.0),
+                        Text(
+                          'Maximum: ${notificationDelay} day(s)\nThis parameter corresponds to the maximum number of days you can receive a notification in case of a course change.',
+                          style: TextStyle(color: secondaryColor),
+                          textAlign: TextAlign.center,
+                        ),
+                        SizedBox(height: 8.0),
+                        Divider(color: secondaryColor),
+                        SizedBox(height: 8.0),
+                        Text(
+                          'Define Start and End time for notifications',
+                          style: TextStyle(color: secondaryColor),
+                        ),
+                        Text(
+                          'Average data consumption per month : ${(31.0 * ((endTime - startTime) / (requestPerMinute / 60.0))).toInt()}KB',
+                          style: TextStyle(color: secondaryColor),
+                        ),
+                        Text(
+                          'Information will be based on you\'re parameter and can be different from the real data consumption (it\'s an minimum estimation)',
+                          style: TextStyle(color: secondaryColor),
+                        ),
+                        Container(
+                          child: RangeSlider(
+                          values: RangeValues(
+                            startTime.toDouble(),
+                            endTime.toDouble(),
+                          ),
+                          onChanged: (RangeValues values) {
+                            setState(() {
                             startTime = values.start.toInt();
                             endTime = values.end.toInt();
-                          });
-                          CacheHelper.setStartTime(values.start.toInt());
-                          CacheHelper.setEndTime(values.end.toInt());
-                        },
-                        min: 0,
-                        max: 24,
-                        divisions: 24,
-                        labels: RangeLabels(
-                          '${startTime} h',
-                          '${endTime} h',
-                        ),
-                        inactiveColor:
+                            });
+                            CacheHelper.setStartTime(values.start.toInt());
+                            CacheHelper.setEndTime(values.end.toInt());
+                          },
+                          min: 0,
+                          max: 24,
+                          divisions: 24,
+                          labels: RangeLabels(
+                            '${startTime} h',
+                            '${endTime} h',
+                          ),
+                          inactiveColor:
                             secondaryColor, // Change the inactive color of the slider
-                      ),
-                    ),
-                    SizedBox(height: 8.0),
-                    Divider(color: secondaryColor),
-                    SizedBox(height: 8.0),
-                    Text('Time between two requests in minutes',
-                        style: TextStyle(color: secondaryColor)),
-                    
-                    Container(
-                      child: Slider(
-                        value: requestPerMinute.toDouble(),
-                        onChanged: (double value) {
-                          setState(() {
+                          ),
+                        ),
+                        SizedBox(height: 8.0),
+                        Divider(color: secondaryColor),
+                        SizedBox(height: 8.0),
+                        Text('Time between two requests in minutes',
+                          style: TextStyle(color: secondaryColor)),
+                        
+                        Container(
+                          child: Slider(
+                          value: requestPerMinute.toDouble(),
+                          onChanged: (double value) {
+                            setState(() {
                             requestPerMinute = value.toInt();
-                          });
-                          CacheHelper.setRequestPerMinute(value.toInt());
-                        },
-                        min: 1,
-                        max: 240,
-                        divisions: 16,
-                        label: '${requestPerMinute} minutes',
-                        inactiveColor: secondaryColor,
+                            });
+                            CacheHelper.setRequestPerMinute(value.toInt());
+                          },
+                          min: 1,
+                          max: 240,
+                          divisions: 16,
+                          label: '${requestPerMinute} minutes',
+                          inactiveColor: secondaryColor,
+                          ),
+                        ),
+                        SizedBox(height: 8.0),
+                        Divider(color: secondaryColor),
+                        SizedBox(height: 8.0),
+                        GestureDetector(
+                          onTap: () {
+                          launch('https://infuseting.github.io');
+                          },
+                          child: Text(
+                          'Visit infuseting.github.io',
+                          style: TextStyle(color: Colors.blue),
+                          ),
+                        ),
+                        SizedBox(height: 8.0),
+                        GestureDetector(
+                          onTap: () {
+                          launch('https://antoninhuaut.fr/');
+                          },
+                          child: Text(
+                          'Thanks to Antonin Huaut for their help',
+                          style: TextStyle(color: Colors.blue),
+                          ),
+                        ),
+                        SizedBox(height: 8.0),
+                        GestureDetector(
+                          onTap: ()  {
+                            js.context.callMethod("launchApp");
+                          },
+                          child: Text(
+                          'Install Shortcut',
+                          style: TextStyle(color: Colors.blue),
+                          ),
+                        ),
+                        ],
+                      ),
                       ),
                     ),
-                    SizedBox(height: 8.0),
-                    Divider(color: secondaryColor),
-                    SizedBox(height: 8.0),
-                    GestureDetector(
-                      onTap: () {
-                        launch('https://infuseting.github.io');
-                      },
-                      child: Text(
-                        'Visit infuseting.github.io',
-                        style: TextStyle(color: Colors.blue),
-                      ),
-                    ),
-                    SizedBox(height: 8.0),
-                    GestureDetector(
-                      onTap: () {
-                        launch('https://antoninhuaut.fr/');
-                      },
-                      child: Text(
-                        'Thanks to Antonin Huaut for their help',
-                        style: TextStyle(color: Colors.blue),
-                      ),
-                    ),
-                    SizedBox(height: 8.0),
-                    GestureDetector(
-                      onTap: ()  {
-                          js.context.callMethod("launchApp");
-                      },
-                      child: Text(
-                        'Install Shortcut',
-                        style: TextStyle(color: Colors.blue),
-                      ),
-                    ),
-                    
                   ],
-                ),
-        ),
+
       ),
-    );
+    ),
+    ));
+
   }
 }
