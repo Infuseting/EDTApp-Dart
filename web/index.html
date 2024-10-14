@@ -14,7 +14,7 @@
     This is a placeholder for base href that will be replaced by the value of
     the `--base-href` argument provided to `flutter build`.
   -->
-  <base href="$FLUTTER_BASE_HREF">
+  <base href="/">
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
@@ -33,6 +33,50 @@
   <link rel="manifest" href="manifest.json">
 </head>
 <body>
+  <script>
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+    });
+    function launchApp() {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('User accepted the A2HS prompt');
+          } else {
+            console.log('User dismissed the A2HS prompt');
+          }
+          deferredPrompt = null;
+        });
+      }
+    }
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("GET", './version.json', true);
+        xmlhttp.onload = function () {
+          if (xmlhttp.status == 200) {
+            var version = xmlhttp.responseText.split(',')[1];
+            var currentVersion = window.localStorage.getItem('version');
+            console.log('currentVersion is ' + currentVersion);
+            console.log('version is ' + version);
+            if (currentVersion && currentVersion != version) {
+              console.log('clearing cache');
+              caches.delete('flutter-app-manifest');
+              caches.delete('flutter-temp-cache');
+              caches.delete('flutter-app-cache');
+            }
+            window.localStorage.setItem('version', version);
+          }
+        };
+        xmlhttp.send();
+      });
+    }
+  </script>
   <script src="flutter_bootstrap.js" async></script>
 </body>
 </html>

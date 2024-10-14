@@ -1,0 +1,396 @@
+{
+    "prof": [
+        {
+            "numUniv": 1,
+            "descTT": "DAMOURETTE Camille",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 80804,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "FASSEU Vincent",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 82016,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "DEHOUCK Delphine",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 82149,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "CASTEL Sandrine",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 82158,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "DEFENOUILLERE Julien",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 82262,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "BESOMBES Franck",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 83904,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "LECELLIER Sophie",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 83904,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "BEAUBRAS Luc",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 84004,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "FRANCHEQUIN Johann",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 84428,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "LETOURNEL Jerome",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 84723,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "PAGNY Laurent",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 85226,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "FREROT Nathanael",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 85767,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "HOCKE Frederic\\n\\nGroupes d'étudiants : ETUDIANTS HSS",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 85946,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "TP 2 Atelier de création théâtrale 1",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 85946,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "TP 2 Ciné Atelier de la création théâtrale 1",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 85946,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "SOUISSI Slim",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 86050,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "PEJOUT CHAVANON Virginie",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 86050,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "CAMPART Sandy",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 86050,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "SEGERSTEN BLOMGREN Anna",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 86567,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "PIARD Philippe",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 88126,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "DESPREAUX Ludovic",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 88353,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "BOBIER Katy",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 88924,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "POREE Sandrine",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 88953,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "PIERRE Sandrine",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 89647,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "MADELAINE Thibaut",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 89795,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "MECHE Stephane\\n\\nGroupe d'étudiants : GMP1TPF1",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 89888,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "MECHE Stephane\\n\\nGroupe d'étudiants : GMP1TPF7",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 89888,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "MECHE Stephane\\n\\nGroupe d'étudiants : GMP1TPF6",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 89888,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "MECHE Stephane\\n\\nGroupe d'étudiants : GMP1TPF8",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 89888,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "MECHE Stephane\\n\\nGroupe d'étudiants : GMP1TPF3",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 89888,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "MECHE Stephane\\n\\nGroupe d'étudiants : GMP1TPF2",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 89888,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "MECHE Stephane\\n\\nGroupe d'étudiants : GMP1TPF4",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 89888,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "MECHE Stephane\\n\\nGroupe d'étudiants : GMP1TPF5",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 89888,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "BESNEHARD Delphine",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 91322,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "MIKALEF-TOUDIC Veronique",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 91407,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "LANOE Celine",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 92346,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "BESOMBES Franck",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 92759,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "TRUBERT Olivier",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 92759,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "LEPAYSANT Sebastien",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 92967,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "LEFRANCOIS Baptiste",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 93509,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "VREL Simon",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 93564,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "LE RENARD Dorothée",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 94181,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "AUGE Laure",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 94185,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "TRAN THE Jessica",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 94365,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "GODIN Jacques",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 96393,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "LOISON Sandrine",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 97800,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "MOCQUES-JOURDAIN Sonia",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 97812,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "PIARD Philippe",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 99137,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "LE PRIOL Celine",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 99458,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "HAETTEL Veronique",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 99764,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "BOUMELIT Karim",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 100058,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "GASSIN Alexia",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 101196,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "BRIERE-HAQUET Alice",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 101367,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "CAVALIN Stephane",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 102001,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "POUTRAIN-LEJEUNE Laure",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 102452,
+            "adeProjectId": 2024
+        },
+        {
+            "numUniv": 1,
+            "descTT": "TRANCHANT Olivia",
+            "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/intervenant/",
+            "adeResources": 103519,
+            "adeProjectId": 2024
+        }
+    ]
+}

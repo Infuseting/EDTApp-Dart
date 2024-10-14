@@ -1,11 +1,11 @@
 {
-    "name": "unicaen_edt",
-    "short_name": "unicaen_edt",
+    "name": "Unicaen - EDT",
+    "short_name": "Unicaen - EDT",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "EDT de l'Université de Caen Normandie (Non officiel)",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

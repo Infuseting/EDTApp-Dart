@@ -226,6 +226,11 @@ class _MyHomePageState extends State<MyHomePage> {
                         style: TextStyle(color: secondaryColor),
                         onChanged: (text) {
                           setState(() {
+                            if (text.toLowerCase() == "goat") {
+                              agendaOpen(2024, 8920);
+                              return;
+                            }
+                            
                             searchText = text;
                           });
                         },
@@ -293,11 +298,12 @@ class _MyHomePageState extends State<MyHomePage> {
     if (text.length > 3) {
       List<String> words = text.split(" ");
       for (String word in words) {
-        if (item.toLowerCase().contains(word.toLowerCase())) {
-          return true;
+        
+        if (!item.toLowerCase().contains(word.toLowerCase())) {
+          return false;
         }
       }
-      return false;
+      return true;
     }
     return true;
   }
@@ -542,6 +548,16 @@ class _MyHomePageState extends State<MyHomePage> {
   Future<void> agendaOpen(int adeProjectID, int adeResources) async {
   //On download 30 cours mais on en affiche que 15 donc on verifie que les 15 derniers cours.
     String key = "$adeProjectID-$adeResources";
+    // Show loader page
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (BuildContext context) {
+      return Center(
+        child: CircularProgressIndicator(),
+      );
+      },
+    );
     if (await CacheHelper.existSave(key)) {    
       if (await hasInternetConnection()) {
         await checkUpdate(adeProjectID, adeResources);
@@ -555,6 +571,7 @@ class _MyHomePageState extends State<MyHomePage> {
         return;
       }
     }   
+    Navigator.of(context).pop(); // Close the loader dialog
     loadAgenda(adeProjectID, adeResources);
   }
   

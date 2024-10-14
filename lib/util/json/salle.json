@@ -1,0 +1,5249 @@
+{
+	"refreshMinutes": 5,
+	"salle": [
+		{
+		  "numUniv": 1,
+		  "descTT": "AC 120 (A)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37215,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GEA INFO 12 (B 004)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 68669,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "TC ETUDES CO 17 (C 007)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67669,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S1 122",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38365,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "EA 009 - Salle de valorisation de la recherche",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 5698,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Amphitheatre C. F. Baclesse",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22882,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "A 109",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29957,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S3 137",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38606,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "TC ETUDES CO 11 (C 001)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 68169,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Amphi Fresnel (N)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 258,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SB 232 (N)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39366,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "1211",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39455,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S1 108",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39391,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "DR 302 (D)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39150,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SA 016 (N)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37206,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "DR 272 (D)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38794,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SE 307 (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 2907,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ES 303 (K)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38420,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ENS-219",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39959,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS1-082 - Salle TP Histologie",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 210516,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "CH006",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39908,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "A 017",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29700,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B 007",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29915,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS2-093",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22408,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "A2 002 - Amphi 2000 (K)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38048,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S3 276",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37574,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "AC 117 (A)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38357,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Piscine Petit bassin - SUAPS (SUAPS)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39081,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GEA-237",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39997,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GB310",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 26676,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS1-081",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22359,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS1-081",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22359,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GEA-027",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39925,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "IA 202",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 122599,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "G-CH-227",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 70947,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Salle 117 - TP Physiologie",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 119469,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "DR S16 (D)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38939,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S3 263",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37825,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "303",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 68657,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GA Avant garde",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39843,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS3-032",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22422,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GB316",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 69215,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS1-087",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22344,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S1 036",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39499,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "G-CH-219",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 16439,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B 037",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29813,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B 037",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29813,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "LI 129 (I)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37667,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SA 117 (N)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37712,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "LI 230 (I)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38010,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B 028",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29764,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "LI 371 (I)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38474,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "HSE 122 - Salle S4",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 40205,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS1-072",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22385,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS1-072",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22385,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GB220",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 69168,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "UFR SALLE INFORMATIQUE",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67629,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "3251",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39434,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B 115",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 30034,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B1-119 (B1)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 149114,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Forêt de Grimbosq",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 146012,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "DR 373 (D)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38418,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "2124",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38756,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "G-CH-206",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 28566,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS0-084 - Informatique Niveau 0",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 2344,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ESIX ESPACE MULTIMEDIA",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67683,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S1 110",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38292,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B1-230 (B1)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 149096,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "C 03 (ABCD)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67697,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Sortie de terrain",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 72588,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ESIX TD4 (G S10)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 68690,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Piscine Grand bassin - SUAPS (SUAPS)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 3581,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ENS-213",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39970,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GB306",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 69182,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "204",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 68647,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "1206",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37948,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SB S26 (N)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39084,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S2 306",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39048,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "DR 304 (D)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38523,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Salle informatique AC 137 (A)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39618,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "1103",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37872,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "BU 3 (G)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37715,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Amphi S3 057",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 17766,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "EE 117",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 134666,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ENS-209",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39935,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "IUT AMPHI AMIOT (A 001)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67511,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "TC-130",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 114381,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "EG 019",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 31566,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S3 022",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 114619,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SD25 (ABC) (ABC)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 40154,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GEA-111",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39983,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S2 116",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37973,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Amphi S3 044",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38073,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Salle des Marches",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 13449,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "DR 309 (D)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38370,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "LI 158 (I)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39792,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "LI 133 (I)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39273,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "DR 306 (D)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38275,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S1 128",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39010,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S3 122",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38195,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "TC-102",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 114393,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SD 235 (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37518,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SC S36 - Salle Venus (M)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38372,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "HSE 111 - Salle S2",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 40232,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SE 508 (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 7266,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S1 026",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38510,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B1-144 (B1)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 149116,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GIM B6 (D 006)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 8128,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GEII 2INFO1 (IU 1023)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 68231,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "IUT AMPHI B",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67888,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B1-157b (B1)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 163678,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ENS-006",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39919,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S2 104",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37219,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Salle Jacques Izard",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 85863,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S3 029",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37164,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "A 108",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 30026,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "DR 268 (D)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37767,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS0-079",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22283,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS2-096",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22444,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SD 014 (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39735,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GEII LABO LANGUES",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 8083,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GEII LABO LANGUES",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 8083,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Salle de tir - SUAPS (SUAPS)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37192,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B 103",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29979,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "G-CH-205",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 28553,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "UFR TD1",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 68268,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "UFR TD1",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 68268,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GB212",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 69197,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "21",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 68232,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GEA-119",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 114389,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Salle 027 - Cabinet de medecine experimental",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 9014,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GEA 25 (B 107)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 36440,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S3 409",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37901,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "IA 118",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39387,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S3 279",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39235,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SALLE DE VISIOCONFERENCE (IUT)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 1989,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS1-065 - Informatique Niveau 1",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 2345,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "TC18 (ABC)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 1717,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ES 002 (K)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37040,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "DR S44 (D)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 25536,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Amphi S3 049",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 17768,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "3141",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37113,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS1-083",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22376,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS1-083",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22376,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S3 159",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37845,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B1-202 (B1)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 149122,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GB102",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 69022,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Amphi Oresme (D)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 674,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SD36 (ABC) (ABC)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22115,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Amphi Laplace (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 1012,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GEII 2TD3 (IU 1034)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67509,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SB 004 (N)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37285,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S1 132",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38281,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GB110",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 15676,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Amphi D1 (E)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 126,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S3 275",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39174,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "A 116",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29951,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "A 116",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29951,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S2 112",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 13486,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Forêt de Cerisy",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 146013,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S3 273",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39601,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "10",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 68175,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GEA-207",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39949,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SD 238 (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37946,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "HA 001",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 21737,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SD21 (ABC) (ABC)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 30331,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S3 271",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39819,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S1 031",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38793,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SD 017 (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37208,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Amphi S3 043",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37067,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S1 014",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38059,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S3 256",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37494,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "TC-106",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39975,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GEII 1PRO2 (E 013)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 68614,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Salle Yves Moderan (N)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39634,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Salle 102 - TP Chimie analytique",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 146004,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B1-223 (B1)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 163370,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "P3",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 72655,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S3 020",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37887,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SD 330 (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39699,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SB 206 (N)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 4118,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "IU 108",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 23609,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "A 103",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29972,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "A 103",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29972,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "IU 030",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 83684,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "3252",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38996,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "LI 241 (I)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37694,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS3-049 - Informatique Niveau 3",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 90843,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "AC 135 (A)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38391,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "UFR BUREAU D'ETUDES (F S010)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 1722,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SD 435 (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 4935,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B1-137 (B1)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 149104,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "CH015",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 28202,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GEII 2TD4 (IU 1033)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 68714,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S1 112",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38444,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS2-094",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 6779,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Grand gymnase - SUAPS (SUAPS)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39565,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "stade caen Nord (foot)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39847,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "IU 028",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 23024,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "DR 103 (D)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38708,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "HSE 112 - Salle S3",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 40222,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "EE 023",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 6824,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S3 403",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37564,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "EG 057",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38473,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SD31 (ABC) (ABC)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 30308,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "UFR Salle Multimedia 2",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67708,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S1 209",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39466,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Amphi Varignon",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 680,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S3 259",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38546,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "HSE 017 - Salle Multimedia",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 40053,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "IA 125",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39763,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SE 504 (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 4068,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "AT004",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 17414,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "LI 213 (I)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38875,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "1207",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39090,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "HSE 123 - Salle S1",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 40248,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S2 106",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37697,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS1-061",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22366,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S3 255",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38076,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "A 104",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 30005,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "A 104",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 30005,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S1 017",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39269,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "DR S04 - Salle Neptune (D)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38670,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Amphitheatre (ABC)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 40140,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "P6",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 12018,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Amphi Jean VIAL (B1-J64) (B1)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 163822,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SE 005 (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 14405,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B 109",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29966,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ES 201 (K)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37596,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ES 301 (K)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39564,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SA 011 (N)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37462,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "DR 308 (D)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 31507,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "LI 157 (I)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38953,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B1-245 (B1)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 149115,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SC S07 (M)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38540,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS0-077",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22329,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS0-077",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22329,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B1-203 (B1)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 149112,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GIM C5 (D 105))",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 2555,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SD 354 (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39833,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Amphi Heron (D)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 775,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ENS-103",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39965,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ES 202 (K)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39239,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Laboratoire multimedia",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 24132,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "AMPHI ESIX",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67795,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "LI 346 (I)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38911,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "DR 102 (D)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38153,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "EG 035",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37784,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "2237",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39005,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "3147",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39609,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "0287",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38870,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B 036",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29904,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B 036",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29904,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS3-053",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22455,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Amphi 210",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22247,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Amphi Mathematiques (A)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 1021,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S3 031",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39038,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B1-442 (B1)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 93613,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GEA-107",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39960,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "A 032",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29660,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "EG 032",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37634,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SE S20 (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37043,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SA  115a (N)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38952,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ENB",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 68600,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "LI 209 (I)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39520,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "EE 022",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 6817,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "AC 011 (A)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 42344,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ENS-102",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 21206,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GB302",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 118294,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "EG 109",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 11776,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GB11",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 21739,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "EG 036",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38680,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B1-147 (B1)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 149110,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SD 327 (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 25477,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "DR 270 (D)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38758,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "LI 229 (I)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39328,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "IU 116",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 23474,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GIM B1 (D 001)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 68260,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SB 207 (N)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 7731,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "IU 020",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 23253,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S3 123",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37805,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GEA 21 (B 102)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 64641,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ENS-004",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39980,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B1-263c (B1)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 163371,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Amphi DE BOUARD (B1-J01) (B1)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 163367,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "DR 301 (D)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 2922,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS1-080",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22347,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Mur d'escalade Halle des sports (H)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 40177,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "EE 014 - Salle du Conseil",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 6822,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Labo de langues",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38713,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B 131",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29960,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B 131",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29960,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "309",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67696,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GEA-023",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39737,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "M4 004 (04)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37242,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "2123",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39568,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SD S62 (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 128655,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S2 405",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39580,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S3 401",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38524,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S1 011",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38013,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GEA-203",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39931,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "TE - 003",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 40535,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GB127",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 21741,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GIM Hall technique (D S06)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 58668,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ENS-002",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39936,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS0-083",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22335,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "AC 010 (A)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 42347,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "TC-114",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39955,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Exterieur",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 917,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S1 010",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38949,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "A 051",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29696,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "A 051",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29696,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B1-101a (B1)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 163681,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Piscine municipale Rousseau",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 35153,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Amphi D3 (E)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 114,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Amphi Daniel HUET (B1-J65) (B1)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 163823,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ESIX TP MECANIQUE",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 4170,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "CCI Evreux",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 13856,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Salle des profs",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 26966,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S3 037 (salle d'examens)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 11444,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GIM C4 (D 104)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 127307,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS3-051",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22410,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS3-051",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22410,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B1-263b (B1)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 163373,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Amphi Lignier (A)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 101,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GIM A3 (D S01)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 68433,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS2-092",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22445,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S3 416",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38288,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GB124",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 68994,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ES 001 (K)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39325,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Amphi Chimie (A)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 206,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S1 134",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 81328,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "EG 107",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39583,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PH106",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 31388,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SE 605 (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37808,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS2-070",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22414,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "AMPHI JOSETTE TRAVERT",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 40002,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS0-076",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22310,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS0-076",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22310,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "TC14 (ABC)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 30079,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS0-094",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22317,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS0-094",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22317,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SD 362 (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39324,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GEA-115",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 114382,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B 008",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29769,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B 008",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29769,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SE 210 (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 28066,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "DR 404 (D)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39674,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GEA 24 (B 106)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67607,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "LI 214 (I)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37894,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "IU 119",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22334,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "EG 059",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38620,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "TC-204",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39917,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S3 274",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39020,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S2 303",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 16259,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Amphi Poincare (N)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 650,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "DE 110",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 25695,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ES 102 (K)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38459,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Halle des sports (H)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39225,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "DR 371 (D)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37729,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "EG 103",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39680,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Amphi Rouelle (N)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 391,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "DR S49 (D)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 31459,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GEA-011",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 114394,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SD 454 (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 222,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Salle Jo Trehard (D)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37778,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "DR 267 (D)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39065,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "405",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 68772,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "HSE 016 - Salle S0",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 286,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "LI 222 (I)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38528,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "CH010",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 28203,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "AC 104 (A)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 17399,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS3-040",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22451,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS3-040",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22451,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GEII 2TD2 (E 109)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 68201,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Auditorium",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22238,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GIM C3 (D 103)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 135151,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B 015",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29931,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B 015",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29931,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "BS 212",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37513,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "0280",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22991,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ESIX BUREAU D'ETUDES",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67876,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "TC-240",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39998,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "LI 233 (I)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38677,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "AC 119 (A)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37595,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "12",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 68869,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SD 130 (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37180,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GEII 1ATM2",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 96087,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GEA-015",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 12084,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Salle des theses",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22244,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S2 410",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39588,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "EG 042",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39215,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "TC01 - Salle d'examens (ABC)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 40156,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SE 203 (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38959,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "TC-110",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39927,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Salle 028 - Salle des Theses",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38735,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "LI 228 (I)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37975,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ENS-013",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39946,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "TC28 (ABC)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 40157,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "A 047",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 28407,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GEII 2INFO3 (IU 1027)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 68565,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Salle de formation 3eme BU Sciences",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38885,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "IU 031",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 88538,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "AMPHI UFR",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 68183,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "IUT AMPHI C",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67734,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ER 235",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 6233,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "2",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 66712,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SB 007 (N)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39285,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GB218",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 31670,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GB109",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 69006,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Salle de simulation d'odontologie",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 4316,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "310",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 103791,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "AC 123 (A)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 10875,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "IA 124",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37207,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S3 138",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 44566,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SB 222 (N)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37369,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "3143",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38256,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B1-239 (B1)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 149123,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S1 032",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39550,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS2-090",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22484,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Salle des theses et de visioconference",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 7064,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "AC 126 (A)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37983,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "2127",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39491,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "EE 204",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 10179,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "LI 128 (I)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39069,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S2 121",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37531,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GIM CONTROLES A (D 106)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67936,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Amphi S3 045",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37368,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "LI 211 (I)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38657,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "3140",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39337,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S.Examen",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 68670,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GEA 22 (B 104)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 68224,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Amphi D2 (E)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 653,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SHUC",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37184,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "DR S03 - Salle Mercure (D)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38643,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "EE 219",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 10181,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Salle informatique AC 103 (A)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38686,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ENS-205",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39981,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B 102",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29964,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B1-157a (B1)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 163683,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS0-081",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22307,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS0-081",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22307,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SD 230 (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39160,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "EG 034",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38309,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S3 016",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 111862,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "2234",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39052,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S2 226",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39811,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S1 131",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38071,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GIM C1 (D 101)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 64732,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "11",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67535,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "LI 240 (I)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37848,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "TC ETUDES CO 12 (C 002)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 64731,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S3 136",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37829,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "2235",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37590,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GEA 11 (B 001)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 8092,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B1-136 (B1)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 149124,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S1 126",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38432,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B1-152 (B1)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 149109,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SD 154 (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38965,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "2236",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38484,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S1 130",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38326,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS3-011",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22407,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS3-011",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22407,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Amphi Marie de Cleves (VISSO)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 295,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS2-068",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22401,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS2-068",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22401,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "AC 139 (A)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 15468,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "I6 007 - Petit gymnase - ESPE",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 11661,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "HSE 113 - Salle Info 2",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 292,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B 116",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29970,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B 116",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29970,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Salle 116 - TP Parasitologie",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 118409,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ENS-010",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39940,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "AC 129 (A)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39333,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GB301",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 69214,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Atelier Conv",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 64573,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Salle de danse - SUAPS (SUAPS)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38858,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B 132",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 30003,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SD24 (ABC) (ABC)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 40153,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GEII 1PRO1 (E 014)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67769,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "LI 234 (I)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37866,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SE 013 (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39525,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GEII 2TD5 (IU 1016)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 68254,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S1 127",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38318,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S3 161",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39194,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "E-CAMPUS",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 5590,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS1-085",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22373,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS1-085",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22373,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "IA 102",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 246,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SE 514 (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38122,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "A 107",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29977,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "A 107",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29977,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SD S55 (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38830,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS2-072",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22413,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ES 103 (K)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38931,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "IU 120",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 24621,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PH005",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 28297,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B1-240 (B1)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 149118,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B1-401 (B1)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 184727,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "LI 132 (I)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39620,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "TC-028",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 91692,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ENS-111",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39973,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "EG 104",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38862,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ENS-202",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39988,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ES 101 (K)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39242,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SD 254 (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37756,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "HSE 008 - Amphitheatre",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 40071,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "14",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 68156,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S3 335",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37670,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "LI 134 (I)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39493,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "EG 114",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38979,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "DR S18 (D)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39807,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "22",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 68675,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS2-091 - Informatique Niveau 2",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22443,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "TC 41 (C 105)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67889,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "TC 41 (C 105)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67889,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "23",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67531,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Salle Horizon - SUAPS (SUAPS)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38775,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "1109",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37355,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS3-041",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22418,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S1 218",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39512,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "LI 204 (I)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38737,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Amphi Cauchy",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 68939,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "TC INFO 20 (C 010)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 8122,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "TC INFO 20 (C 010)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 8122,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S3 415",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38788,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S3 160",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39232,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ES 203 (K)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38840,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ESIX TL3 (G 05)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67492,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Amphi D4 (E)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 157,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Danse UFR - Campus 2 (GY)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38538,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Amphi Conte",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37258,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "EE 206",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 10175,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "A 014",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22951,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "HSE 024 - Hall Entreprise",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 40075,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "24",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 68328,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "UFR TD4",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 68727,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "TC12 (ABC)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 30074,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "AC 143a (A)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 15355,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GB217",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 69151,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S3 278",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39690,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Salle Belvedere (D)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37555,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "1208",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39343,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ES S01 (K)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37154,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SD 138 (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37173,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B1-117 (B1)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 149126,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SB 005 (N)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38675,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S1 124",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37696,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S1 231",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37538,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S1 016",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37874,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Amphi Demolombe (D)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 462,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS3-048",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22438,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS3-048",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22438,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "BU 2 (G)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37886,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B1-118 (B1)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 149120,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "G-CH-225",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 140990,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ES S03 (K)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39262,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ENS-009",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39967,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "LI 232 (I)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39118,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "DR S48 (D)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39604,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "LI 160 (I)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37699,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Salle polyvalente - SUAPS (SUAPS)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37964,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GEII 2TDAV (IU 1038)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 68318,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Amphi Tocqueville (T)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 963,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "G-CH-204",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 28520,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GEII 1ATM1",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 21847,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "DR 310 (D)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39161,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "TC 38 (C 102)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67873,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "TC 38 (C 102)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67873,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GB201",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 69052,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "A 100",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 30004,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "A 100",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 30004,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SE 407 (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37464,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PH205",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 4790,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "LI 239 (I)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38366,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "A 027",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 55099,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "A 101",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29952,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "A 101",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29952,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SB S24 (N)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39417,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "FIM St Lo",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 11584,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PH105",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 31390,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SE 204 (formation des personnels) (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38053,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Salle 113 - Salle de TD",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39394,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S1 207",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37702,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "DR 372 (D)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39508,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SD 338 (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38242,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS3-012",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22427,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S3 162",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39098,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GEA-103",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39939,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "3250",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38923,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "UFR POLE LICENCES LP CGC",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67714,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "UFR POLE LICENCES LP CGC",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67714,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "TC 39 (C 103)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67682,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "TC 39 (C 103)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67682,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Laboratoire d'odontologie",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 4317,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "C 13 (ABCD)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 68338,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Amphi 1",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29946,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Salle 026 - Pharmacie experimentale",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22933,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B1-224 (B1)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 149092,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Amphi Vauquelin (N)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 326,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "LI 347 (I)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37637,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B 014",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29799,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B 014",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29799,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Gymnase - UFR3",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39849,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "DE 021",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 137853,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SC S06 (M)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37794,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Atelier Comp",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 469,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "TC 51 (C 101)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67650,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "TC 51 (C 101)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67650,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B1-201 (B1)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 149105,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SE 609 (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 1305,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ES 003 (K)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37216,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S1 205 (labo de langues)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37945,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Amphi 2",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 30017,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S2 110",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39295,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "EG 108",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38612,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GEII 2ELN2 (IU 1030)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 66476,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "BRED - JOINVILLE-LE-PONT",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 16265,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SD 256 (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37843,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Amphi Jacquet (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 344,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B 002",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29902,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B 002",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29902,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "I6 005 - Grand gymnase - ESPE",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 11660,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "DR 370 (D)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 13138,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "IA 218",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38795,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "TC 40 (C 104)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67646,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "TC 40 (C 104)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67646,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "G-CH-207",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 28567,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GEA 14 (B 003)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 8080,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GEII 2INFO2 (IU 1025)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67480,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "TC 14 (C 004)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67905,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "TC 14 (C 004)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67905,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ES 302 (K)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38239,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "DR 101 (D)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38087,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Amphi Le Verrier",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38836,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "DE 112",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 24257,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "CH008",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 28168,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SA 008 (N)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38208,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "AC 007 (A)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 42349,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SC S37 - Salle Jupiter (M)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39404,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "UFR POLE LICENCES MMN",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 68216,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "IRTS",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 97152,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "3146",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39569,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS1-084",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22393,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS1-084",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22393,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B 100",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29985,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B 100",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29985,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ENS-101",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39993,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SD 227 (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 25468,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "AMPHI CHARPAK",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 40001,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GB303",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 69201,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "1105",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39064,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "A 030",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29663,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "UFR TD3",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 66686,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "UFR TD3",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 66686,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ESIX REGULATION N°122",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 12878,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "3142",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39736,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SE 211 (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 220,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "DE 113",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 1260,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SG LABO LANGUES (A 002)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67660,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SG LABO LANGUES (A 002)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67660,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS2-089",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22491,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B1-101c (B1)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 163682,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "TC INFO 19 (C 009)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 127011,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "TC INFO 19 (C 009)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 127011,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "B1-157c (B1)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 163680,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SB 203 (N)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38005,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SB S27 (N)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39310,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GEA INFO 13 (B 005)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 68401,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "DR 104 (D)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38855,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SE 310 (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39255,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "1110",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39548,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "DR 303 (D)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38520,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PH101",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 31391,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S1 037",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38343,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Salle Jean Rene PUTS",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 247,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "G-CH-222",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 11669,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS1-086",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22351,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS1-086",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22351,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "AC 138 (A)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 63717,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GIM C2 (D 102)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 68309,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "CH013",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 28196,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SE 309 (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38608,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ER 337",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 7604,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GIM B3b",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 132134,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S2 108",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 26249,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "LI 218 (I)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38303,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S3 254",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39492,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS2-095",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22415,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS2-095",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22415,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "TC13 (ABC)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 30323,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS1-062",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22362,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS1-062",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22362,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SE 303 (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38147,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "308",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 17204,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ESIX LABORATOIRE LANGUES",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67799,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SE 212 (formation des personnels) (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 216,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Amphi Dumont d'Urville (N)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 1010,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "DR S46 (D)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39082,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S3 030",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38566,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "1106",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38541,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Amphi Grignard (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 1023,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SALLE DE CONFERENCES CAMPUS CHERBOURG",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 138814,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS3-052",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22420,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "LI 130 (I)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39732,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GEII 2TD1 (IU 1037)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 68298,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ES S02 (K)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37120,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "A 015",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29654,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "A 015",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 29654,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S1 210",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38250,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "HSE 115 - Salle Info 1",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 40243,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "ENS-107",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39928,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "CH014",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 28183,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "P4",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 33109,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "0281",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22969,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "3259",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 1136,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "3258",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37212,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS1-073",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22381,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS1-073",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22381,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PS3-050",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 22437,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SD 016 (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38088,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "DR 269 (D)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38369,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S1 113",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38398,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "G-CH-203",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 40018,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "LI 210 (I)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38364,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "2240",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 140413,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "DR S17 (D)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37426,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "FIM Cherbourg",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 35787,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GIM B4 (D 004)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67717,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S3 032",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 5695,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "G-CH-138",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 32450,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "DE 111",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 24263,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "PH207",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 17295,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GB213",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 69157,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "2129",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38113,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "Amphi 500",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38413,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "TC-024",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39984,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "G-CH-106",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 40006,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "LI 238 (I)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37877,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "SE S19 (L)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39528,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S1 033",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37405,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GIM B2 ESPACE MULTIMEDIA (D 002)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67892,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GIM B2 ESPACE MULTIMEDIA (D 002)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 67892,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S3 023",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 59933,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GB220a",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 3208,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "GEA 10 (B 002)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 8086,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "LI 159 (I)",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 38410,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S3 277",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 39682,
+		  "adeProjectId": 1
+		},
+		{
+		  "numUniv": 1,
+		  "descTT": "S2 401",
+		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+		  "adeResources": 37439,
+		  "adeProjectId": 1
+		}
+	
+	]
+  }

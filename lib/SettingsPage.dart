@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:universal_html/js.dart' as js;
 import 'package:url_launcher/url_launcher.dart';
 import 'util/cacheManager.dart';
 import 'util/darkMode.dart';
@@ -18,7 +19,6 @@ class _SettingsPageState extends State<SettingsPage> {
   late int requestPerMinute;
   late Color primaryColor;
   late Color secondaryColor;
-
   @override
   void initState() {
     super.initState();
@@ -206,6 +206,17 @@ class _SettingsPageState extends State<SettingsPage> {
                         style: TextStyle(color: Colors.blue),
                       ),
                     ),
+                    SizedBox(height: 8.0),
+                    GestureDetector(
+                      onTap: ()  {
+                          js.context.callMethod("launchApp");
+                      },
+                      child: Text(
+                        'Install Shortcut',
+                        style: TextStyle(color: Colors.blue),
+                      ),
+                    ),
+                    
                   ],
                 ),
         ),

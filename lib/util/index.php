@@ -11,6 +11,11 @@ function parse_event_data($docstring) {
             list($key, $value) = explode(":", $line, 2);
             $tempKey = $key;
             $stop = 0;
+            $keyParts = explode(";", $key);
+            $key = $keyParts[0];
+            if (isset($keyParts[1]) && $keyParts[1] == "TZID=Europe/Paris" && ($key == "DTSTART" || $key == "DTEND")) {
+                $value = date('Ymd\THis', strtotime($value) - 2 * 3600);
+            }
             $event_data[trim($key)] = trim($value);
         } else {
             if ($stop != 1) {
@@ -57,29 +62,23 @@ if (!file_exists("{$folderPath}/file.json")) {
 $date = DateTime::createFromFormat('Y-m-d', $day);
 
 header('Content-Type: application/json');
-for ($i = 0; $i < 30; $i++) {
+if ($adeBase == 2024 ) {
+
     $file = file_get_contents("{$folderPath}/file.json");
     $data = json_decode($file, true);
 
-    $ade_univ = "http://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp";
-    $params = [
-        "resources" => strval($adeRessources),
-        "projectId" => strval($adeBase),
-        "firstDate" => $date->format('Y-m-d'),
-        "lastDate" => $date->format('Y-m-d')
-    ];
-
-    $query = http_build_query($params);
-    $request = $ade_univ . "?" . $query;
-    $response = file_get_contents($request);
+    $ade_univ = "https://enpoche.normandie-univ.fr/aggrss/public/edt/edtProxy.php?edt_url=http://proxyade.unicaen.fr/ZimbraIcs/intervenant/$adeRessources.ics";
+    $params = [];
+    $response = file_get_contents($ade_univ);
     if (isset($http_response_header) && strpos($http_response_header[0], '200') === false) {
         error_log("Error: received non-200 response code");
     } else {
-        if (strpos($response, "Le projet est invalide") !== false || strpos($response, "BEGIN:VEVENT") === false) {
+        if (strpos($response, "BEGIN:VEVENT") === false) {
             error_log("$adeBase:$adeRessources return anything");
         }
     }
     $response = get_data($response);
+    for ($i = 0; $i < count($response); $i++) {
     if (isset($data[$date->format('Y-m-d')])) {
         if (isset($response[$date->format('Y-m-d')])) {
             $contentWithoutSequence = array_map(function($event) {
@@ -88,14 +87,14 @@ for ($i = 0; $i < 30; $i++) {
                 unset($event['LAST-MODIFIED']);
                 return $event;
             }, $data[$date->format('Y-m-d')]['content']);
-
+        
             $responseWithoutSequence = array_map(function($event) {
                 unset($event['SEQUENCE']);
                 unset($event['DTSTAMP']);
                 unset($event['LAST-MODIFIED']);
                 return $event;
             }, $response[$date->format('Y-m-d')]);
-
+        
             
             if (json_encode($contentWithoutSequence) !== json_encode($responseWithoutSequence)) {
                 $data[$date->format('Y-m-d')]['content'] = $response[$date->format('Y-m-d')];
@@ -104,14 +103,74 @@ for ($i = 0; $i < 30; $i++) {
         }
         
     } 
-    else{
-        $data[$date->format('Y-m-d')]['content']  = isset($response[$date->format('Y-m-d')]) ? $response[$date->format('Y-m-d')] : [];
-        $data[$date->format('Y-m-d')]['lastUpdate'] = round(microtime(true) * 1000);
+        else{
+            $data[$date->format('Y-m-d')]['content']  = isset($response[$date->format('Y-m-d')]) ? $response[$date->format('Y-m-d')] : [];
+            $data[$date->format('Y-m-d')]['lastUpdate'] = round(microtime(true) * 1000);
+        }
+        $date->modify('+1 day');
     }
     file_put_contents("{$folderPath}/file.json", json_encode($data, JSON_UNESCAPED_UNICODE));
-    $date->modify('+1 day');
+    
+
+
 }
-   
+else {
+
+
+    for ($i = 0; $i < 30; $i++) {
+        $file = file_get_contents("{$folderPath}/file.json");
+        $data = json_decode($file, true);
+        $ade_univ = "http://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp";
+        $params = [
+            "resources" => strval($adeRessources),
+            "projectId" => strval($adeBase),
+            "firstDate" => $date->format('Y-m-d'),
+            "lastDate" => $date->format('Y-m-d')
+        ];
+    
+        $query = http_build_query($params);
+        $request = $ade_univ . "?" . $query;
+        $response = file_get_contents($request);
+        if (isset($http_response_header) && strpos($http_response_header[0], '200') === false) {
+            error_log("Error: received non-200 response code");
+        } else {
+            if (strpos($response, "Le projet est invalide") !== false || strpos($response, "BEGIN:VEVENT") === false) {
+                error_log("$adeBase:$adeRessources return anything");
+            }
+        }
+        $response = get_data($response);
+        if (isset($data[$date->format('Y-m-d')])) {
+            if (isset($response[$date->format('Y-m-d')])) {
+                $contentWithoutSequence = array_map(function($event) {
+                    unset($event['SEQUENCE']);
+                    unset($event['DTSTAMP']);
+                    unset($event['LAST-MODIFIED']);
+                    return $event;
+                }, $data[$date->format('Y-m-d')]['content']);
+            
+                $responseWithoutSequence = array_map(function($event) {
+                    unset($event['SEQUENCE']);
+                    unset($event['DTSTAMP']);
+                    unset($event['LAST-MODIFIED']);
+                    return $event;
+                }, $response[$date->format('Y-m-d')]);
+            
+                
+                if (json_encode($contentWithoutSequence) !== json_encode($responseWithoutSequence)) {
+                    $data[$date->format('Y-m-d')]['content'] = $response[$date->format('Y-m-d')];
+                    $data[$date->format('Y-m-d')]['lastUpdate'] = round(microtime(true) * 1000);
+                }
+            }
+            
+        } 
+        else{
+            $data[$date->format('Y-m-d')]['content']  = isset($response[$date->format('Y-m-d')]) ? $response[$date->format('Y-m-d')] : [];
+            $data[$date->format('Y-m-d')]['lastUpdate'] = round(microtime(true) * 1000);
+        }
+        file_put_contents("{$folderPath}/file.json", json_encode($data, JSON_UNESCAPED_UNICODE));
+        $date->modify('+1 day');
+    }
+}   
 $date = DateTime::createFromFormat('Y-m-d', $day);
 $result = [];
 for ($i = 0; $i < 15; $i++) {
@@ -127,3 +186,4 @@ for ($i = 0; $i < 15; $i++) {
 }
 echo json_encode($result, JSON_UNESCAPED_UNICODE);
 
+    
