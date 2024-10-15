@@ -51,7 +51,7 @@ class _AgendaPageState extends State<AgendaPage> {
 
     setState(() {
       isDarkMode = settings[0] as bool;
-      save = jsonDecode(utf8.decode(settings[1] as List<int>)) as dynamic;
+      save = json.decode(settings[1] as String) as dynamic;
       lastUpdate = settings[2] as int;
       primaryColor = settings[3] as Color;
       secondaryColor = settings[4] as Color;
@@ -319,16 +319,16 @@ class _AgendaPageState extends State<AgendaPage> {
   }
 
   List<dynamic> topCalc(dynamic event, DateTime lastEndTime) {
-    print("Calculating top padding for event: $event with last end time: $lastEndTime");
+    //print("Calculating top padding for event: $event with last end time: $lastEndTime");
     DateTime startTime = DateFormat("HH:mm").parse(parseTime(event["DTSTART"]!));
-    print("Start time: $startTime");
+    //print("Start time: $startTime");
     DateTime endTime = DateFormat("HH:mm").parse(parseTime(event["DTEND"]!));
-    print("End time: $endTime");
+    //print("End time: $endTime");
     
     DateTime adjustedStartTime = startTime.subtract(Duration(hours: 8));
-    print(adjustedStartTime);
+    //print(adjustedStartTime);
     DateTime adjustedLastEndTime = lastEndTime.subtract(Duration(hours: 6));
-    print(adjustedLastEndTime);
+    //print(adjustedLastEndTime);
     
     int startMinutes = adjustedStartTime.hour * 60 + adjustedStartTime.minute;
     int lastEndMinutes = adjustedLastEndTime.hour * 60 + adjustedLastEndTime.minute;
@@ -342,9 +342,9 @@ class _AgendaPageState extends State<AgendaPage> {
   }
 
   String parseTime(String times) {
-    print("Parsing time: $times");
+    //print("Parsing time: $times");
     final parsedTime = parseTimestampRQST(times);
-    print("Parsed time: $parsedTime");
+    //print("Parsed time: $parsedTime");
     final outputFormatter = DateFormat("HH:mm");
     final adjustedTime = parsedTime.add(Duration(hours: 2));
     return outputFormatter.format(adjustedTime);

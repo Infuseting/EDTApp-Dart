@@ -79,7 +79,6 @@ class CacheHelper {
         final value = prefs.getString(key);
         if (value != null) {
           try {
-              print((value));
             // Ensure the value is a valid JSON string
             if (value.startsWith('{') && value.endsWith('}')) {
               value.replaceAll("\n", "");

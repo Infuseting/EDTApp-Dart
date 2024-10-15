@@ -13,7 +13,6 @@ Future<void> checkUpdate(int adeProjectID, int adeResources) async {
     String key = "$adeProjectID-$adeResources";
     int? lastUpdate = await CacheHelper.getLastUpdate(key);
     String date = DateFormat('yyyy-MM-dd').format(DateTime.now());
-    print(Uri.parse('$baseUrl/update/?adeBase=$adeProjectID&adeRessources=$adeResources&lastUpdate=$lastUpdate&date=$date'));
     final result = await http.get(Uri.parse('$baseUrl/update/?adeBase=$adeProjectID&adeRessources=$adeResources&lastUpdate=$lastUpdate&date=$date'));
     if (result.statusCode == 200) {
       final jsonResponse = json.decode(utf8.decode(result.bodyBytes));
