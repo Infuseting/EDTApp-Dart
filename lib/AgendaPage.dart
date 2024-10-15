@@ -51,7 +51,7 @@ class _AgendaPageState extends State<AgendaPage> {
 
     setState(() {
       isDarkMode = settings[0] as bool;
-      save = jsonDecode(settings[1] as String) as dynamic;
+      save = jsonDecode(utf8.decode(settings[1] as List<int>)) as dynamic;
       lastUpdate = settings[2] as int;
       primaryColor = settings[3] as Color;
       secondaryColor = settings[4] as Color;

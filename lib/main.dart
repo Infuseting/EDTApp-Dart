@@ -16,7 +16,7 @@ Future<void> checkUpdate(int adeProjectID, int adeResources) async {
     print(Uri.parse('$baseUrl/update/?adeBase=$adeProjectID&adeRessources=$adeResources&lastUpdate=$lastUpdate&date=$date'));
     final result = await http.get(Uri.parse('$baseUrl/update/?adeBase=$adeProjectID&adeRessources=$adeResources&lastUpdate=$lastUpdate&date=$date'));
     if (result.statusCode == 200) {
-      final jsonResponse = json.decode(result.body);
+      final jsonResponse = json.decode(utf8.decode(result.bodyBytes));
       dynamic jsonFile;
       String? save =  await CacheHelper.getSave(key);
 
@@ -64,7 +64,7 @@ Future<bool> hasInternetConnection() async {
 Future<Map<String, dynamic>> fetchJsonData(String url) async {
   final response = await http.get(Uri.parse(url));
   if (response.statusCode == 200) {
-    return json.decode(response.body);
+    return json.decode(utf8.decode(response.bodyBytes));
   } else {
     throw Exception('Failed to load data');
   }

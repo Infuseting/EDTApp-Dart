@@ -193,10 +193,10 @@ class _SettingsPageState extends State<SettingsPage> {
                         SizedBox(height: 8.0),
                         GestureDetector(
                           onTap: () {
-                          launch('https://infuseting.github.io');
+                          launch('https://infuseting.fr');
                           },
                           child: Text(
-                          'Visit infuseting.github.io',
+                          'Visit infuseting.fr',
                           style: TextStyle(color: Colors.blue),
                           ),
                         ),
@@ -220,6 +220,8 @@ class _SettingsPageState extends State<SettingsPage> {
                           style: TextStyle(color: Colors.blue),
                           ),
                         ),
+                        SizedBox(height: 8.0),
+                  
                         ],
                       ),
                       ),
