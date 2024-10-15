@@ -178,7 +178,7 @@ class _AgendaPageState extends State<AgendaPage> {
                                     textAlign: TextAlign.center,
                                     overflow: TextOverflow.clip,
                                     style: TextStyle(
-                                    color: Colors.black,
+                                    color: colorScnd,
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold,
                                     ),
@@ -188,7 +188,7 @@ class _AgendaPageState extends State<AgendaPage> {
                                     textAlign: TextAlign.center,
                                     overflow: TextOverflow.clip,
                                     style: TextStyle(
-                                    color: Colors.black,
+                                    color: colorScnd,
                                     fontSize: 14,
                                     ),
                                   ),
@@ -197,7 +197,7 @@ class _AgendaPageState extends State<AgendaPage> {
                                     textAlign: TextAlign.center,
                                     overflow: TextOverflow.clip,
                                     style: TextStyle(
-                                    color: Colors.black,
+                                    color: colorScnd,
                                     fontSize: 14,
                                     ),
                                   ),
@@ -205,7 +205,7 @@ class _AgendaPageState extends State<AgendaPage> {
                                     event["DESCRIPTION"]?.replaceAll("\\n", "") ?? "",
                                     textAlign: TextAlign.center,
                                     style: TextStyle(
-                                    color: Colors.black,
+                                    color: colorScnd,
                                     fontSize: 14,
                                     ),
                                     overflow: TextOverflow.clip,
@@ -259,7 +259,10 @@ class _AgendaPageState extends State<AgendaPage> {
     if (compareTimestamps(currentTimeStamp, endClass) > 0) {
       return Pair(Color(0xFFA9A9A9), Colors.black);
     }
-    if (element["SUMMARY"].toString().contains(" CC") ||
+    if (element["SUMMARY"].toString().contains("SAÉ") || element["DESCRIPTION"].toString().contains("SAÉ")) {
+      return Pair(Color(0xFFE9169B), Colors.white);
+    }
+    else if (element["SUMMARY"].toString().contains(" CC") ||
         element["SUMMARY"].toString().contains(" CTP") ||
         element["SUMMARY"].toString().contains(" CTD") ||
         element["DESCRIPTION"].toString().contains(" CC") ||
@@ -277,7 +280,7 @@ class _AgendaPageState extends State<AgendaPage> {
       return Pair(Color(0xFFFFD700), Colors.black);
     } else {
       return Pair(Color(0xFF00CED1), Colors.black);
-    }
+    } 
   }
 
   int getCurrentTimestamp() {
