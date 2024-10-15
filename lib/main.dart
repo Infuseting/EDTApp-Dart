@@ -178,7 +178,7 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: secondaryColor,
         centerTitle: true,
         title: Text(
-          widget.title ,
+          widget.title,
           style: TextStyle(color: primaryColor),
         ),
         leading: IconButton(
@@ -245,6 +245,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   ],
                 ),
               ),
+             
               Expanded(
                 child: SingleChildScrollView(
                   child: Column(
@@ -253,47 +254,46 @@ class _MyHomePageState extends State<MyHomePage> {
                         width: 500,
                         child: Column(
                           children: [
-                            SizedBox(
-                              width: 400,
-                              child: ListTile(
-                                title: Row(
-                                  children: [
-                                    Expanded(
-                                    child: Center(
-                                      child: Row(
-                                      mainAxisAlignment: MainAxisAlignment.center,
-                                      children: [
-                                        Icon(
-                                        Icons.download,
-                                        color: secondaryColor,
-                                        ),
-                                        SizedBox(width: 10), // Add some spacing between the icon and text
-                                        Text(
-                                        'Install APP', // Replace 'name' with a defined string
-                                        style: TextStyle(color: secondaryColor),
-                                        maxLines: 2,
-                                        overflow: TextOverflow.ellipsis,
-                                        ),
-                                      ],
+                            !js.context.callMethod('isStandalone')
+                                ? SizedBox(
+                                    width: 400,
+                                    child: ListTile(
+                                      title: Row(
+                                        children: [
+                                          Expanded(
+                                            child: Center(
+                                              child: Row(
+                                                mainAxisAlignment: MainAxisAlignment.center,
+                                                children: [
+                                                  Icon(
+                                                    Icons.download,
+                                                    color: secondaryColor,
+                                                  ),
+                                                  SizedBox(width: 10), // Add some spacing between the icon and text
+                                                  Text(
+                                                    'Install APP', // Replace 'name' with a defined string
+                                                    style: TextStyle(color: secondaryColor),
+                                                    maxLines: 2,
+                                                    overflow: TextOverflow.ellipsis,
+                                                  ),
+                                                ],
+                                              ),
+                                            ),
+                                          ),
+                                        ],
                                       ),
+                                      onTap: () {
+                                        bool isStandalone = js.context.callMethod('isStandalone');
+                                        if (!isStandalone) {
+                                          js.context.callMethod("launchApp");
+                                        }
+                                      },
                                     ),
-                                    ),
-                                ],
-                              ),
-                              onTap: () {
-                                bool isStandalone = js.context.callMethod('isStandalone');
-                                if (!isStandalone) {
-                                  js.context.callMethod("launchApp");
-                                }
-                              },
-                            ),
-                            ),
-                        
+                                  )
+                                : Container(),
                           ],
                         ),
                       ),
-                      
-
                       SizedBox(
                         child: favList(),
                       ),

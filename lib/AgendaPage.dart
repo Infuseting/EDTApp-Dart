@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'util/cacheManager.dart';
@@ -67,8 +66,10 @@ class _AgendaPageState extends State<AgendaPage> {
       appBar: AppBar(
         backgroundColor: secondaryColor,
         title: Text(
-          'Agenda | $lastUpdateString',
-          style: TextStyle(color: primaryColor)
+          
+          'Agenda | ${lastUpdateString}',
+          style: TextStyle(color: primaryColor),
+          maxLines: 2,
         ),
         iconTheme: IconThemeData(
           color: primaryColor, // Change the back button color here
