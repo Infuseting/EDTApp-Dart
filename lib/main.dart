@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'util/cacheManager.dart';
@@ -7,6 +8,7 @@ import 'package:universal_html/js.dart' as js;
 import 'SettingsPage.dart';
 import 'util/darkMode.dart';
 import 'package:intl/intl.dart';
+import 'package:crypto/crypto.dart';
 import 'AgendaPage.dart';
 Future<void> checkUpdate(int adeProjectID, int adeResources) async {
   try {
@@ -59,14 +61,39 @@ Future<bool> hasInternetConnection() async {
     return false;
   }
 }
-
+String jsonBaseUrl = '$baseUrl/assets/json/';
+Future<String> md5calc(String input) async {
+  return md5.convert(utf8.encode(await CacheHelper.getEventList(input) ?? '')).toString();
+}
 Future<Map<String, dynamic>> fetchJsonData(String url) async {
-  final response = await http.get(Uri.parse(url));
-  if (response.statusCode == 200) {
-    return json.decode(utf8.decode(response.bodyBytes));
-  } else {
+  final getMD5 = await http.get(Uri.parse('$jsonBaseUrl?fileName=$url'));
+  if (getMD5.statusCode == 200) {
+    String md5Server = json.decode(getMD5.body)['hash'];
+    String md5Local = await md5calc(url);
+    print("MD5 Comparator for $url : " + md5Server + " " + md5Local); 
+    if (md5Server != md5Local) {
+      final response = await http.get(Uri.parse('$jsonBaseUrl$url'));
+      if (response.statusCode == 200) {
+        String local = await CacheHelper.getEventList(url) ?? '';
+        print("MD5 Comparator Local for $url : " + local);
+        print("MD5 Comparator Server for $url : " + utf8.decode(response.bodyBytes));
+        CacheHelper.addEventList(url, utf8.decode(response.bodyBytes));
+        return json.decode(utf8.decode(response.bodyBytes));
+      } else {
+        throw Exception('Failed to load data');
+      }
+    }
+    String? eventList = await CacheHelper.getEventList(url);
+    if (eventList != null) {
+      return json.decode(eventList);
+    } else {
+      throw Exception('Failed to load data');
+    }
+  }
+  else {
     throw Exception('Failed to load data');
   }
+  
 }
 
 void main() {
@@ -139,17 +166,17 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    fetchJsonData('$baseUrl/assets/json/salle.json').then((data) {
+    fetchJsonData('salle.json').then((data) {
       setState(() {
         salleData = data['salle'];
       });
     });
-    fetchJsonData('$baseUrl/assets/json/prof.json').then((data) {
+    fetchJsonData('prof.json').then((data) {
       setState(() {
         profData = data['prof'];
       });
     });
-    fetchJsonData('$baseUrl/assets/json/univ.json').then((data) {
+    fetchJsonData('univ.json').then((data) {
       setState(() {
         univData = data['univ'];
       });
@@ -196,7 +223,7 @@ class _MyHomePageState extends State<MyHomePage> {
             icon: const Icon(Icons.web),
             color: primaryColor,
             onPressed: () {
-              launch('https://infuseting.github.io/');
+              launchUrl(Uri.parse('https://infuseting.fr/'), mode: LaunchMode.externalApplication);
             },
           ),
         ],
@@ -270,7 +297,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                                   ),
                                                   SizedBox(width: 10), // Add some spacing between the icon and text
                                                   Text(
-                                                    'Install APP', // Replace 'name' with a defined string
+                                                    'Installer l\'application', // Replace 'name' with a defined string
                                                     style: TextStyle(color: secondaryColor),
                                                     maxLines: 2,
                                                     overflow: TextOverflow.ellipsis,
@@ -295,6 +322,9 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       SizedBox(
                         child: favList(),
+                      ),
+                      SizedBox(
+                        child: CustomAgenda(),
                       ),
                       SizedBox(
                         width: 400,
@@ -349,6 +379,117 @@ class _MyHomePageState extends State<MyHomePage> {
     return true;
   }
 
+  Widget CustomAgenda() {
+    return FutureBuilder<List<dynamic>>(
+      future: CacheHelper.getAllFromCustom(),
+      builder: (context, snapshot) {
+        if (snapshot.connectionState == ConnectionState.waiting) {
+          return const Center(child: CircularProgressIndicator());
+        } else if (snapshot.hasError) {
+          return const Center(child: Text('Error loading custom agenda'));
+        } else {
+          List<dynamic> custom = snapshot.data ?? [];
+
+            return Column(
+            children: [
+                Center(
+                child: Container(
+                width: 400,
+                child: Column(
+                children: [
+                  
+                  ...custom.map<Widget>((item) {
+                  
+                  
+                  String name = item['descTT'];
+                  int adeProjectID = item['adeProjectId'];
+                  int adeResources = item['adeResources'];
+                  String key = '$adeProjectID-$adeResources';
+                  return ListTile(
+                  title: Row(
+                    children: [
+                    const SizedBox(width: 10), // Add padding of 10 at left
+                    Center(
+                      child: FutureBuilder<bool>(
+                      future: CacheHelper.existCustom(key),
+                      builder: (context, snapshot) {
+                        if (snapshot.connectionState == ConnectionState.waiting) {
+                        return Icon(Icons.close, color: secondaryColor);
+                        } else if (snapshot.hasError) {
+                        return Icon(Icons.error, color: secondaryColor);
+                        } else {
+                        IconData iconData = Icons.close;
+                        return IconButton(
+                          icon: Icon(iconData),
+                          color: Colors.red,
+                          onPressed: () {
+                          setState(() {
+                            CacheHelper.removeFromCustom(adeResources.toString());  
+                          });
+                          },
+                        );
+                        }
+                      },
+                      ),
+                    ),
+                    Expanded(
+                      child: Text(
+                      name,
+                      style: TextStyle(color: secondaryColor),
+                      maxLines: 2,
+                      overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+                    ],
+                  ),
+                  onTap: () {
+                    agendaOpen(adeProjectID, adeResources);
+                  },
+                  );
+                }).toList(),
+                SizedBox(
+                  width: 400,
+                  child: ListTile(
+                    title: Row(
+                      children: [
+                        Expanded(
+                          child: Center(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Icon(
+                                  Icons.add,
+                                  color: secondaryColor,
+                                ),
+                                SizedBox(width: 10), // Add some spacing between the icon and text
+                                Text(
+                                  'Ajouter votre emploi du temps', // Replace 'name' with a defined string
+                                  style: TextStyle(color: secondaryColor),
+                                  maxLines: 2,
+                                  overflow: TextOverflow.ellipsis,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                    onTap: () {
+                      showCustomEdtPopup(context);
+                    },
+                  ),
+                )
+                ]
+                ),
+                
+              ),
+              ),
+            ],
+            );
+        }
+      },
+    );
+  }
   Widget favList() {
     return FutureBuilder<List<dynamic>>(
       future: CacheHelper.getAllFromFav(),
@@ -358,7 +499,7 @@ class _MyHomePageState extends State<MyHomePage> {
         } else if (snapshot.hasError) {
           return const Center(child: Text('Error loading favorites'));
         } else {
-          List<dynamic> favs = snapshot.data ?? [];
+          List<dynamic> custom = snapshot.data ?? [];
 
             return Column(
             children: [
@@ -366,7 +507,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: Container(
                 width: 400,
                 child: Column(
-                children: favs.map<Widget>((item) {
+                children: custom.map<Widget>((item) {
                   String name = item['descTT'];
                   int adeProjectID = item['adeProjectId'];
                   int adeResources = item['adeResources'];
@@ -562,7 +703,7 @@ class _MyHomePageState extends State<MyHomePage> {
                               itemsToShow += 20;
                             });
                           },
-                          child: Text('Load more'),
+                          child: Text('Plus'),
                         ),
                       SizedBox(height: 20),
                     ],
@@ -575,6 +716,168 @@ class _MyHomePageState extends State<MyHomePage> {
       },
     );
   }
+  void showCustomEdtPopup(BuildContext context) {
+      TextEditingController projectNameController = TextEditingController();
+      TextEditingController resourcesController = TextEditingController();
+      int currentStep = 0;
+      showDialog(
+        context: context,
+        builder: (BuildContext context) {
+            return StatefulBuilder(
+            builder: (BuildContext context, StateSetter setState) {
+
+                return SizedBox(
+                width: double.infinity,
+                height: double.infinity,
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                Align(
+                  alignment: Alignment.topRight,
+                  child: IconButton(
+                  icon: Icon(Icons.close),
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                  ),
+                ),
+                Material(
+                  child: Stepper(
+                    currentStep: currentStep,
+                    onStepContinue: () {
+                      print(currentStep);
+                      if (currentStep < 3) {
+                        setState(() {
+                          if (currentStep == 1) {
+                            if (resourcesController.text.length == 13 && RegExp(r'^\d+$').hasMatch(resourcesController.text)) {
+                              currentStep += 1;
+                            }
+                            else{
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                    content: Text('ID invalide. Veuillez entrer un ID numérique de 13 chiffres.'),
+                                  backgroundColor: Colors.red,
+                                ),
+                                );
+                            }
+                          }
+                          else {
+                            currentStep +=1;
+                          }
+                        
+                        });
+                      } else {
+                        // Handle form submission
+                        String leocardID = resourcesController.text;
+                        String name = projectNameController.text;
+                        int last8Digits = int.parse(leocardID.substring(leocardID.length - 8));
+                        Map<String, dynamic> customAgenda = {
+                          "numUniv": 1,
+                          "descTT": name,
+                          "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/etudiant/",
+                          "adeResources": last8Digits,
+                          "adeProjectId": 2023
+                        };
+                        print(jsonEncode(customAgenda));
+                        CacheHelper.addToCustom('$last8Digits', jsonEncode(customAgenda));
+                        // Add your logic to handle the input values here
+                        Navigator.of(context).pop();
+                      }
+                    },
+                    onStepCancel: () {
+                      if (currentStep > 0) {
+                        setState(() {
+                          currentStep -= 1;
+                        });
+                      } else {
+                        Navigator.of(context).pop();
+                      }
+                    },
+                    steps: [
+                      Step(
+                        title: Text('Etape 1'),
+                        content: Column(
+                          children: [
+                          SizedBox(height: 16),
+                          GestureDetector(
+                            onTap: () {
+                            launchUrl(Uri.parse('https://moncomptenumerique.unicaen.fr/compte/gerer'));
+                            },
+                            child: Text(
+                            'Obtenez votre identifiant leocard (Copiez-le)',
+                            style: TextStyle(color: Colors.blue),
+                            ),
+                          ),
+                          SizedBox(height: 16),
+                          ],
+                        ),
+                        isActive: currentStep == 0,
+                      ),
+                      Step(
+                        title: Text('Etape 2'),
+                        content: Column(
+                          children: [
+                          SizedBox(height: 16),
+                          TextField(
+                            controller: resourcesController,
+                            decoration: InputDecoration(labelText: 'Entrez votre identifiant'),
+                            
+                          ),
+                          SizedBox(height: 16),
+                          ],
+                        ),
+
+                        
+                        isActive: currentStep == 1,
+                      ),
+                      Step(
+                        title: Text('Etape 3'),
+                        content: Column(
+                          children: [
+                          SizedBox(height: 16),
+                          TextField(
+                            controller: projectNameController,
+                            decoration: InputDecoration(labelText: 'Entrez le nom de cet agenda personnalisé'),
+                          ),
+                          SizedBox(height: 16),
+                          ],
+                        ),
+                        isActive: currentStep == 2,
+                      ),
+                      Step(
+                        title: Text('Etape 4'),
+                        content: Column(
+                          children: [
+                          SizedBox(height: 16),
+                            Text(
+                            'Votre identifiant : ${resourcesController.text}',
+                            ),
+                            Text(
+                            'Nom de l\'agenda : ${projectNameController.text}'
+                            ),
+                            Text(
+                            'Vous devez redémarrer l\'application après avoir confirmé cela',
+                            style: TextStyle(color: Colors.red)
+                            ),
+                            SizedBox(height: 16),
+                            ],
+                          ),
+                          isActive: currentStep == 3,
+                          ),
+                        ],
+                        ),
+                ),
+                ],
+              ),
+              );
+            },
+            );
+          });
+        }
+  
+    
+  
+
   void loadAgenda(int adeProjectID, int adeResources) {
     // Implement your logic to load and display the agenda here.
     // This function should handle the UI and data fetching for the agenda.

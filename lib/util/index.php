@@ -114,6 +114,58 @@ if ($adeBase == 2024 ) {
 
 
 }
+else if ($adeBase == 2023) {
+
+    $file = file_get_contents("{$folderPath}/file.json");
+    $data = json_decode($file, true);
+
+    $ade_univ = "https://enpoche.normandie-univ.fr/aggrss/public/edt/edtProxy.php?edt_url=http://proxyade.unicaen.fr/ZimbraIcs/etudiant/$adeRessources.ics";
+    $params = [];
+    $response = file_get_contents($ade_univ);
+    if (isset($http_response_header) && strpos($http_response_header[0], '200') === false) {
+        error_log("Error: received non-200 response code");
+    } else {
+        if (strpos($response, "BEGIN:VEVENT") === false) {
+            error_log("$adeBase:$adeRessources return anything");
+        }
+    }
+    $response = get_data($response);
+    for ($i = 0; $i < count($response); $i++) {
+    if (isset($data[$date->format('Y-m-d')])) {
+        if (isset($response[$date->format('Y-m-d')])) {
+            $contentWithoutSequence = array_map(function($event) {
+                unset($event['SEQUENCE']);
+                unset($event['DTSTAMP']);
+                unset($event['LAST-MODIFIED']);
+                return $event;
+            }, $data[$date->format('Y-m-d')]['content']);
+        
+            $responseWithoutSequence = array_map(function($event) {
+                unset($event['SEQUENCE']);
+                unset($event['DTSTAMP']);
+                unset($event['LAST-MODIFIED']);
+                return $event;
+            }, $response[$date->format('Y-m-d')]);
+        
+            
+            if (json_encode($contentWithoutSequence) !== json_encode($responseWithoutSequence)) {
+                $data[$date->format('Y-m-d')]['content'] = $response[$date->format('Y-m-d')];
+                $data[$date->format('Y-m-d')]['lastUpdate'] = round(microtime(true) * 1000);
+            }
+        }
+        
+    } 
+        else{
+            $data[$date->format('Y-m-d')]['content']  = isset($response[$date->format('Y-m-d')]) ? $response[$date->format('Y-m-d')] : [];
+            $data[$date->format('Y-m-d')]['lastUpdate'] = round(microtime(true) * 1000);
+        }
+        $date->modify('+1 day');
+    }
+    file_put_contents("{$folderPath}/file.json", json_encode($data, JSON_UNESCAPED_UNICODE));
+    
+
+
+}
 else {
 
 

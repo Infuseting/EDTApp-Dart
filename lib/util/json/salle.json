@@ -2,6 +2,13 @@
 	"refreshMinutes": 5,
 	"salle": [
 		{
+			"numUniv" : 1,
+			"descTT" : "Amphitheatre C3",
+			"adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",
+			"adeResources": 39294,
+			"adeProjectId": 1
+		},
+		{
 		  "numUniv": 1,
 		  "descTT": "AC 120 (A)",
 		  "adeUniv": "https://ade.unicaen.fr/jsp/custom/modules/plannings/anonymous_cal.jsp",

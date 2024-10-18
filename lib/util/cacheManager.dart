@@ -1,28 +1,17 @@
 import 'package:shared_preferences/shared_preferences.dart';
 import 'dart:convert';
-
 class CacheHelper {
-  static Future<void> addToFav(String key, String value) async {
+  static Future<void> addEventList(String key, String eventList) async {
     final prefs = await SharedPreferences.getInstance();
-    //print('adding to fav $key');
-    await prefs.setString('$key-fav', value);
-  }
-  static Future<String?> getFromFav(String key) async {
-    final prefs = await SharedPreferences.getInstance();
-    //print('get fav $key');
-    return prefs.getString('$key-fav');
+    await prefs.setString('$key-eventList', eventList);
   }
 
-  static Future<void> removeFromFav(String key) async {
+  static Future<String?> getEventList(String key) async {
     final prefs = await SharedPreferences.getInstance();
-    //print('remove from fav $key');
-    await prefs.remove('$key-fav');
+    final String? encodedData = prefs.getString('$key-eventList');
+    return encodedData;
   }
-  static Future<bool> existFav(String key) async {
-    final prefs = await SharedPreferences.getInstance();
-    //print('exist fav $key');
-    return prefs.containsKey('$key-fav');
-  }
+  
 
 
   static Future<void> addSave(String key, String value) async {
@@ -68,7 +57,74 @@ class CacheHelper {
     //print('exist fav $key');
     return prefs.containsKey('$key-lastUpdate');
   }
+  static Future<void> addToCustom(String key, String value) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setString('$key-custom', value);
+  }
 
+  static Future<String?> getFromCustom(String key) async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.getString('$key-custom');
+  }
+
+  static Future<void> removeFromCustom(String key) async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.remove('$key-custom');
+  }
+
+  static Future<bool> existCustom(String key) async {
+    final prefs = await SharedPreferences.getInstance();
+    return prefs.containsKey('$key-custom');
+  }
+
+  static Future<List<Map<String, dynamic>>> getAllFromCustom() async {
+    final prefs = await SharedPreferences.getInstance();
+    final keys = prefs.getKeys();
+    final List<Map<String, dynamic>> allCustoms = [];
+
+    for (String key in keys) {
+      if (key.endsWith('-custom')) {
+        final value = prefs.getString(key);
+        if (value != null) {
+          try {
+            // Ensure the value is a valid JSON string
+            if (value.startsWith('{') && value.endsWith('}')) {
+              value.replaceAll("\n", "");
+              final Map<String, dynamic> customMap = Map<String, dynamic>.from(jsonDecode(value));
+              allCustoms.add(customMap);
+            } else {
+              print('Invalid JSON format for key $key');
+            }
+          } catch (e) {
+            // Handle the error if the value is not a valid JSON string
+            print('Error decoding JSON for key $key: $e');
+          }
+        }
+      }
+    }
+    return allCustoms;
+  }
+  static Future<void> addToFav(String key, String value) async {
+    final prefs = await SharedPreferences.getInstance();
+    //print('adding to fav $key');
+    await prefs.setString('$key-fav', value);
+  }
+  static Future<String?> getFromFav(String key) async {
+    final prefs = await SharedPreferences.getInstance();
+    //print('get fav $key');
+    return prefs.getString('$key-fav');
+  }
+
+  static Future<void> removeFromFav(String key) async {
+    final prefs = await SharedPreferences.getInstance();
+    //print('remove from fav $key');
+    await prefs.remove('$key-fav');
+  }
+  static Future<bool> existFav(String key) async {
+    final prefs = await SharedPreferences.getInstance();
+    //print('exist fav $key');
+    return prefs.containsKey('$key-fav');
+  }
   static Future<List<Map<String, dynamic>>> getAllFromFav() async {
     final prefs = await SharedPreferences.getInstance();
     final keys = prefs.getKeys();
@@ -79,6 +135,7 @@ class CacheHelper {
         final value = prefs.getString(key);
         if (value != null) {
           try {
+              print((value));
             // Ensure the value is a valid JSON string
             if (value.startsWith('{') && value.endsWith('}')) {
               value.replaceAll("\n", "");
@@ -96,7 +153,6 @@ class CacheHelper {
     }
     return allFavs;
   }
-
   static Future<void> setDarkModeEnabled(bool value) async {
     final prefs = await SharedPreferences.getInstance();
     await prefs.setBool('darkMode', value);
@@ -146,4 +202,6 @@ class CacheHelper {
     final prefs = await SharedPreferences.getInstance();
     return prefs.getInt('requestPerMinute') ?? 15;
   }
+  
+
 }

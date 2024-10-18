@@ -1,5 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
+import 'package:intl/date_symbol_data_file.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'util/cacheManager.dart';
 import 'util/darkMode.dart';
@@ -35,7 +36,6 @@ class _AgendaPageState extends State<AgendaPage> {
   late String key = '${widget.adeProjectID}-${widget.adeResources}';
   @override
   void initState() {
-    super.initState();
     _loadSettings();
   }
   
@@ -92,6 +92,16 @@ class _AgendaPageState extends State<AgendaPage> {
                   if (dayEvents != null && dayEvents.isNotEmpty && dayEvents['content'].isNotEmpty) {
                     DateTime timeLast = DateTime(currentDay.year, currentDay.month, currentDay.day, 6, 0, 0);
                     String dayName = DateFormat('EEEE').format(currentDay);
+                    const dayNames = {
+                      'Monday': 'Lundi',
+                      'Tuesday': 'Mardi',
+                      'Wednesday': 'Mercredi',
+                      'Thursday': 'Jeudi',
+                      'Friday': 'Vendredi',
+                      'Saturday': 'Samedi',
+                      'Sunday': 'Dimanche'
+                    };
+                    dayName = dayNames[dayName] ?? dayName;
                     String formattedDate = DateFormat('d/M/yyyy').format(currentDay);
                     return Container( 
                       constraints: BoxConstraints(
@@ -114,7 +124,7 @@ class _AgendaPageState extends State<AgendaPage> {
                           child: Column(
                             children: [
                               Text(
-                                i == 0 ? "Today" : dayName,
+                                i == 0 ? "Aujourd'hui" : dayName,
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                   color: Colors.black,
@@ -353,4 +363,3 @@ class _AgendaPageState extends State<AgendaPage> {
     return outputFormatter.format(adjustedTime);
   }
 }
-

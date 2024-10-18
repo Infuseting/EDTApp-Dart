@@ -15,7 +15,7 @@ def getProfList(docstring):
 
 
 def get_request(id):
-    txt = f"https://enpoche.normandie-univ.fr/aggrss/public/edt/edtProxy.php?edt_url=http://proxyade.unicaen.fr/ZimbraIcs/intervenant/{id}.ics"
+    txt = f"https://enpoche.normandie-univ.fr/aggrss/public/edt/edtProxy.php?edt_url=http://proxyade.unicaen.fr/ZimbraIcs/intervenant/{id}"
     
     while True:
         try:
@@ -57,15 +57,21 @@ data = {
     
 }
 data["prof"] = []
-time.sleep(60)
-for file_name in range(1, 1000000+1):
-    print(file_name)
-    text = get_request(file_name)
-    if file_name % 5000 == 0:
-        with open('prof.json', 'w', encoding="utf-8") as f:
-            json.dump(data, f, ensure_ascii=False)
-    if text != None:
-        getProf(text, data['prof'])
-
+count = 0
+url = 'https://enpoche.normandie-univ.fr/aggrss/public/edt/edtProxy.php?edt_url=http://proxyade.unicaen.fr/ZimbraIcs/intervenant/?'
+response = requests.get(url)
+for index, i in enumerate(response.text.split('<tr><td valign="top">')):
+    if index != 0 and index != 1:
+        i = i.split('</a></td>')[0]
+        i = i.split('<a href="')[1]
+        i = i.split('">')[1]
+        print(count,i)
+        text = get_request(i)
+        if index % 5000 == 0:
+            with open('prof.json', 'w', encoding="utf-8") as f:
+                json.dump(data, f, ensure_ascii=False)
+        if text != None:
+            getProf(text, data['prof'])
+        count+=1
 with open('prof.json', 'w', encoding="utf-8") as f:
     json.dump(data, f, ensure_ascii=False)
