@@ -5,6 +5,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'util/cacheManager.dart';
 import 'util/darkMode.dart';
 import 'package:intl/intl.dart';
+import 'package:flutter/services.dart';
 class Pair<T, U> {
   final T first;
   final U second;
@@ -74,6 +75,20 @@ class _AgendaPageState extends State<AgendaPage> {
         iconTheme: IconThemeData(
           color: primaryColor, // Change the back button color here
         ),
+        actions: [
+          if (widget.adeProjectID == 2023 || widget.adeProjectID == 2024) 
+            IconButton(
+              icon: const Icon(Icons.link),
+              color: primaryColor,
+              onPressed: () {
+          String edtLink = "https://edt.infuseting.fr/update/myEDT.php?adeBase=${widget.adeProjectID}&adeRessources=${widget.adeResources}";
+          Clipboard.setData(ClipboardData(text: edtLink));
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(content: Text('Fichier Agenda copié')),
+          );
+              },
+            ),
+        ],
       ),
       body: Container(
         color: primaryColor,
