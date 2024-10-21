@@ -15,9 +15,11 @@ Future<void> checkUpdate(int adeProjectID, int adeResources) async {
     String key = "$adeProjectID-$adeResources";
     int? lastUpdate = await CacheHelper.getLastUpdate(key);
     String date = DateFormat('yyyy-MM-dd').format(DateTime.now());
+    print('$baseUrl/update/?adeBase=$adeProjectID&adeRessources=$adeResources&lastUpdate=$lastUpdate&date=$date');
     final result = await http.get(Uri.parse('$baseUrl/update/?adeBase=$adeProjectID&adeRessources=$adeResources&lastUpdate=$lastUpdate&date=$date'));
     if (result.statusCode == 200) {
       final jsonResponse = json.decode(utf8.decode(result.bodyBytes));
+      print(result.body);
       dynamic jsonFile;
       String? save =  await CacheHelper.getSave(key);
 
@@ -859,6 +861,15 @@ class _MyHomePageState extends State<MyHomePage> {
                             'Vous devez redémarrer l\'application après avoir confirmé cela',
                             style: TextStyle(color: Colors.red)
                             ),
+                            GestureDetector(
+                            onTap: () {
+                            launchUrl(Uri.parse('https://www.instagram.com/arthur_mimir/'));
+                            },
+                            child: Text(
+                            'En cas de probleme contacté moi sur Instagram (Cliquez-ici)',
+                            style: TextStyle(color: Colors.blue),
+                            ),
+                          ),
                             SizedBox(height: 16),
                             ],
                           ),

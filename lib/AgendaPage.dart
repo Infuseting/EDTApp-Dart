@@ -284,35 +284,39 @@ class _AgendaPageState extends State<AgendaPage> {
     if (compareTimestamps(currentTimeStamp, endClass) > 0) {
       return Pair(Color(0xFFA9A9A9), Colors.black);
     }
-    if (element["SUMMARY"].toString().contains("SAÉ") || element["DESCRIPTION"].toString().contains("SAÉ")) {
+    if (element["SUMMARY"].toString().contains("SAÉ")) {
       return Pair(Color(0xFFE9169B), Colors.white);
-    }
-    else if (element["SUMMARY"].toString().contains(" CC") ||
-        element["SUMMARY"].toString().contains(" CTP") ||
-        element["SUMMARY"].toString().contains(" CTD") ||
-        element["DESCRIPTION"].toString().contains(" CC") ||
-        element["DESCRIPTION"].toString().contains(" CTP") ||
-        element["DESCRIPTION"].toString().contains(" CTD")) {
+    } else if (element["SUMMARY"].toString().contains(" CC") ||
+           element["SUMMARY"].toString().contains(" CTP") ||
+           element["SUMMARY"].toString().contains(" CTD")) {
       return Pair(Color(0xFFFF6347), Colors.white);
-    } else if (element["SUMMARY"].toString().contains(" TP") ||
-               element["DESCRIPTION"].toString().contains(" TP")) {
+    } else if (element["SUMMARY"].toString().contains(" TP")) {
       return Pair(Color(0xFF32CD32), Colors.white);
-    } else if (element["SUMMARY"].toString().contains(" TD") ||
-               element["DESCRIPTION"].toString().contains(" TD")) {
+    } else if (element["SUMMARY"].toString().contains(" TD")) {
       return Pair(Color(0xFF1E90FF), Colors.white);
-    } else if (element["SUMMARY"].toString().contains(" CM") ||
-               element["DESCRIPTION"].toString().contains(" CM")) {
+    } else if (element["SUMMARY"].toString().contains(" CM")) {
+      return Pair(Color(0xFFFFD700), Colors.black);
+    } else if (element["DESCRIPTION"].toString().contains("SAÉ")) {
+      return Pair(Color(0xFFE9169B), Colors.white);
+    } else if (element["DESCRIPTION"].toString().contains(" CC") ||
+           element["DESCRIPTION"].toString().contains(" CTP") ||
+           element["DESCRIPTION"].toString().contains(" CTD")) {
+      return Pair(Color(0xFFFF6347), Colors.white);
+    } else if (element["DESCRIPTION"].toString().contains(" TP")) {
+      return Pair(Color(0xFF32CD32), Colors.white);
+    } else if (element["DESCRIPTION"].toString().contains(" TD")) {
+      return Pair(Color(0xFF1E90FF), Colors.white);
+    } else if (element["DESCRIPTION"].toString().contains(" CM")) {
       return Pair(Color(0xFFFFD700), Colors.black);
     } else {
       return Pair(Color(0xFF00CED1), Colors.black);
-    } 
+    }
   }
 
   int getCurrentTimestamp() {
     int timestamp = DateTime.now().millisecondsSinceEpoch;
     return timestamp;
   }
-
   DateTime parseTimestampRQST(String timestamp) {
     // Remove the 'Z' at the end to avoid issues with the format parser.
     timestamp = timestamp.replaceAll('Z', '').replaceAll('T', '');
@@ -349,14 +353,14 @@ class _AgendaPageState extends State<AgendaPage> {
   List<dynamic> topCalc(dynamic event, DateTime lastEndTime) {
     //print("Calculating top padding for event: $event with last end time: $lastEndTime");
     DateTime startTime = DateFormat("HH:mm").parse(parseTime(event["DTSTART"]!));
-    //print("Start time: $startTime");
+    print("Start time: $startTime");
     DateTime endTime = DateFormat("HH:mm").parse(parseTime(event["DTEND"]!));
-    //print("End time: $endTime");
+    print("End time: $endTime");
     
     DateTime adjustedStartTime = startTime.subtract(Duration(hours: 8));
-    //print(adjustedStartTime);
+    print("Adjusted Start time : $adjustedStartTime");
     DateTime adjustedLastEndTime = lastEndTime.subtract(Duration(hours: 6));
-    //print(adjustedLastEndTime);
+    print("Adjusted End Time : $adjustedLastEndTime");
     
     int startMinutes = adjustedStartTime.hour * 60 + adjustedStartTime.minute;
     int lastEndMinutes = adjustedLastEndTime.hour * 60 + adjustedLastEndTime.minute;
