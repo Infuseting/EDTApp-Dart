@@ -1,5 +1,5 @@
 <?php
-function parse_event_data($docstring) {
+function parse_event_data($docstring, $adeBase) {
     $data = explode("\n", trim($docstring));
     $event_data = [];
     $tempKey = '';
@@ -12,9 +12,19 @@ function parse_event_data($docstring) {
             $tempKey = $key;
             $stop = 0;
             $keyParts = explode(";", $key);
+            
             $key = $keyParts[0];
-            if (isset($keyParts[1]) && $keyParts[1] == "TZID=Europe/Paris" && ($key == "DTSTART" || $key == "DTEND")) {
-                $value = date('Ymd\THis', strtotime($value) - 2 * 3600);
+        
+            if (($key == "DTSTART" || $key == "DTEND")) {
+                
+                if ($adeBase == 2024 || $adeBase == 2023) {                
+                    $value = date('Ymd\THis', strtotime($value) - 2 * 3600);
+                }
+                else {
+                    $isDaylightSaving = (bool)date('I', strtotime($value));
+                    $value = date('Ymd\THis', strtotime($value) - ($isDaylightSaving ? 2 : 1) * 3600);
+                }
+                
             }
             $event_data[trim($key)] = trim($value);
         } else {
@@ -29,12 +39,12 @@ function parse_event_data($docstring) {
 
     return $event_data;
 }
-function get_data($response) {
+function get_data($response, $adeBase) {
     $list = [];
     $events = explode("BEGIN:VEVENT", $response);
     foreach ($events as $index => $value) {
         if ($index == 0) continue; // Skip the first split part if it's not an event
-        $i = parse_event_data($value);
+        $i = parse_event_data($value, $adeBase);
         $get_start_time_day = date('Y-m-d', strtotime($i['DTSTART']));
         
         $list[$get_start_time_day][] = $i;
@@ -77,7 +87,7 @@ if ($adeBase == 2024 ) {
             error_log("$adeBase:$adeRessources return anything");
         }
     }
-    $response = get_data($response);
+    $response = get_data($response, $adeBase);
     for ($i = 0; $i < count($response); $i++) {
     if (isset($data[$date->format('Y-m-d')])) {
         if (isset($response[$date->format('Y-m-d')])) {
@@ -129,7 +139,7 @@ else if ($adeBase == 2023) {
             error_log("$adeBase:$adeRessources return anything");
         }
     }
-    $response = get_data($response);
+    $response = get_data($response, $adeBase);
     for ($i = 0; $i < count($response); $i++) {
     if (isset($data[$date->format('Y-m-d')])) {
         if (isset($response[$date->format('Y-m-d')])) {
@@ -190,7 +200,7 @@ else {
                 error_log("$adeBase:$adeRessources return anything");
             }
         }
-        $response = get_data($response);
+        $response = get_data($response, $adeBase);
         if (isset($data[$date->format('Y-m-d')])) {
             if (isset($response[$date->format('Y-m-d')])) {
                 $contentWithoutSequence = array_map(function($event) {
@@ -225,7 +235,7 @@ else {
 }   
 $date = DateTime::createFromFormat('Y-m-d', $day);
 $result = [];
-for ($i = 0; $i < 15; $i++) {
+for ($i = 0; $i < 30; $i++) {
     $file = file_get_contents("{$folderPath}/file.json");
     $data = json_decode($file, true);
     if (isset($data[$date->format('Y-m-d')]) && $lastUpdate < $data[$date->format('Y-m-d')]['lastUpdate']) {

@@ -100,7 +100,7 @@ class _AgendaPageState extends State<AgendaPage> {
               scrollDirection: Axis.vertical,
               child: Row(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children: List.generate(16, (i) {
+                children: List.generate(30, (i) {
                   final currentDay = now.add(Duration(days: i));
                   String format = DateFormat('yyyy-MM-dd').format(currentDay);
                   var dayEvents = save[format];
