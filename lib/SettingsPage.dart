@@ -202,6 +202,7 @@ class _SettingsPageState extends State<SettingsPage> {
                           ),
                         ),
                         SizedBox(height: 8.0),
+                        
                         GestureDetector(
                           onTap: () {
                           launch('https://paypal.me/Infuseting27?country.x=FR&locale.x=fr_FR');
