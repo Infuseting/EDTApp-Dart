@@ -10,6 +10,9 @@ import 'util/darkMode.dart';
 import 'package:intl/intl.dart';
 import 'package:crypto/crypto.dart';
 import 'AgendaPage.dart';
+
+// String baseUrl = "https://edt.infuseting.fr"; // Duplicate definition removed
+
 Future<void> checkUpdate(int adeProjectID, int adeResources) async {
   try {
     String key = "$adeProjectID-$adeResources";
@@ -55,18 +58,22 @@ Future<void> checkUpdate(int adeProjectID, int adeResources) async {
     print('Failed to load data $_');
   }
 }
+
 Future<bool> hasInternetConnection() async {
   try {
-    final result = await http.get(Uri.parse('https://edt.infuseting.fr'));
+    final result = await http.get(Uri.parse( 'https://edt.infuseting.fr'));
     return result.statusCode == 200;
   } catch (_) {
     return false;
   }
 }
+
 String jsonBaseUrl = '$baseUrl/assets/json/';
+
 Future<String> md5calc(String input) async {
   return md5.convert(utf8.encode(await CacheHelper.getEventList(input) ?? '')).toString();
 }
+
 Future<Map<String, dynamic>> fetchJsonData(String url) async {
   final getMD5 = await http.get(Uri.parse('$jsonBaseUrl?fileName=$url'));
   if (getMD5.statusCode == 200) {
@@ -95,43 +102,24 @@ Future<Map<String, dynamic>> fetchJsonData(String url) async {
   else {
     throw Exception('Failed to load data');
   }
-  
 }
 
 void main() {
-
   runApp(const MyApp());
 }
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    
     return MaterialApp(
       title: 'Unicaen - EDT',
       theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // TRY THIS: Try running your application with "flutter run". You'll see
-        // the application has a purple toolbar. Then, without quitting the app,
-        // try changing the seedColor in the colorScheme below to Colors.green
-        // and then invoke "hot reload" (save your changes or press the "hot
-        // reload" button in a Flutter-supported IDE, or press "r" if you used
-        // the command line to start the app).
-        //
-        // Notice that the counter didn't reset back to zero; the application
-        // state is not lost during the reload. To reset the state, use hot
-        // restart instead.
-        //
-        // This works for code too, not just values: Most code changes can be
-        // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
       home: const MyHomePage(title: 'Unicaen - EDT'),
-
     );
   }
 }
@@ -139,33 +127,23 @@ class MyApp extends StatelessWidget {
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
   final String title;
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
+
 String baseUrl = "https://edt.infuseting.fr";
+
 class _MyHomePageState extends State<MyHomePage> {
-  
   late bool isDarkMode;
   late String searchText = '';
   late Color primaryColor;
-
   late Color secondaryColor;
   List<dynamic> salleData = [];
   List<dynamic> profData = [];
   List<dynamic> univData = [];
 
-  
   Future<void> _loadSettings() async {
     _incrementWebLaunchCount();
     final settings = await Future.wait([
@@ -180,193 +158,186 @@ class _MyHomePageState extends State<MyHomePage> {
       secondaryColor = settings[2] as Color;
     });
   }
+
   @override
   void initState() {
     super.initState();
-    fetchJsonData('salle.json').then((data) {
-      setState(() {
-        salleData = data['salle'];
-      });
-    });
-    fetchJsonData('prof.json').then((data) {
-      setState(() {
-        profData = data['prof'];
-      });
-    });
-    fetchJsonData('univ.json').then((data) {
-      setState(() {
-        univData = data['univ'];
-      });
-    });
+    _loadData();
     _loadSettings();
     _incrementWebLaunchCount();
+  }
+
+  Future<void> _loadData() async {
+    final results = await Future.wait([
+      fetchJsonData('salle.json'),
+      fetchJsonData('prof.json'),
+      fetchJsonData('univ.json'),
+    ]);
+
+    setState(() {
+      salleData = results[0]['salle'];
+      profData = results[1]['prof'];
+      univData = results[2]['univ'];
+    });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      
       appBar: AppBar(
-      backgroundColor: secondaryColor,
-      centerTitle: true,
-      title: Text(
-        widget.title,
-        style: TextStyle(color: primaryColor),
-      ),
-      leading: IconButton(
-        icon: const Icon(Icons.settings),
-        color: primaryColor,
-        onPressed: () async {
-        await Navigator.push(
-          context,
-          MaterialPageRoute(builder: (context) => SettingsPage()),
-        );
-        _loadSettings(); // Reload settings when returning from SettingsPage
-        },
-      ),
-      actions: [
-        IconButton(
-        icon: const Icon(Icons.web),
-        color: primaryColor,
-        onPressed: () {
-          launchUrl(Uri.parse('https://infuseting.fr/'), mode: LaunchMode.externalApplication);
-        },
+        backgroundColor: secondaryColor,
+        centerTitle: true,
+        title: Text(
+          widget.title,
+          style: TextStyle(color: primaryColor),
         ),
-      ],
+        leading: IconButton(
+          icon: const Icon(Icons.settings),
+          color: primaryColor,
+          onPressed: () async {
+            await Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => SettingsPage()),
+            );
+            _loadSettings(); // Reload settings when returning from SettingsPage
+          },
+        ),
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.web),
+            color: primaryColor,
+            onPressed: () {
+              launchUrl(Uri.parse('https://infuseting.fr/'), mode: LaunchMode.externalApplication);
+            },
+          ),
+        ],
       ),
-      
       body: Center(
-      child: Padding(
-        padding: const EdgeInsets.only(top: 20.0, bottom: 20.0),
-        child: Column(
-        children: <Widget>[
-          Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 20.0),
+        child: Padding(
+          padding: const EdgeInsets.only(top: 20.0, bottom: 20.0),
           child: Column(
-            children: [
-            SizedBox(
-              width: 500,
-              child: TextField(
-              decoration: InputDecoration(
-                hintText: 'Recherche',
-                hintStyle: TextStyle(color: secondaryColor),
-                hintMaxLines: 1,
-                prefixIcon: Icon(Icons.search, color: secondaryColor),
-                border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(10.0),
+            children: <Widget>[
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: Column(
+                  children: [
+                    SizedBox(
+                      width: 500,
+                      child: TextField(
+                        decoration: InputDecoration(
+                          hintText: 'Recherche',
+                          hintStyle: TextStyle(color: secondaryColor),
+                          hintMaxLines: 1,
+                          prefixIcon: Icon(Icons.search, color: secondaryColor),
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(10.0),
+                          ),
+                        ),
+                        style: TextStyle(color: secondaryColor),
+                        onChanged: (text) {
+                          setState(() {
+                            if (text.toLowerCase() == "goat") {
+                              agendaOpen(2024, 8920);
+                              return;
+                            }
+                            searchText = text;
+                          });
+                        },
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                    const Divider(
+                      thickness: 1,
+                      indent: 100,
+                      endIndent: 100,
+                    ),
+                  ],
                 ),
               ),
-              style: TextStyle(color: secondaryColor),
-              onChanged: (text) {
-                setState(() {
-                if (text.toLowerCase() == "goat") {
-                  agendaOpen(2024, 8920);
-                  return;
-                }
-                
-                searchText = text;
-                });
-              },
-              ),
-            ),
-            const SizedBox(height: 20),
-            const Divider(
-              thickness: 1,
-              indent: 100,
-              endIndent: 100,
-            ),
-            ],
-          ),
-          ),
-         
-          Expanded(
-          child: SingleChildScrollView(
-            child: Column(
-            children: [
-              SizedBox(
-              width: 500,
-              child: Column(
-                children: [
-                !js.context.callMethod('isStandalone')
-                  ? SizedBox(
-                    width: 400,
-                    child: ListTile(
-                      title: Row(
-                      children: [
-                        Expanded(
-                        child: Center(
-                          child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
+              Expanded(
+                child: SingleChildScrollView(
+                  child: Column(
+                    children: [
+                        if (kIsWeb) 
+                          SizedBox(
+                          width: 500,
+                          child: Column(
                           children: [
-                            Icon(
-                            Icons.download,
-                            color: secondaryColor,
-                            ),
-                            SizedBox(width: 10), // Add some spacing between the icon and text
-                            Text(
-                            'Installer l\'application', // Replace 'name' with a defined string
-                            style: TextStyle(color: secondaryColor),
-                            maxLines: 2,
-                            overflow: TextOverflow.ellipsis,
-                            ),
+                            !js.context.callMethod('isStandalone')
+                              ? SizedBox(
+                                width: 400,
+                                child: ListTile(
+                                title: Row(
+                                  children: [
+                                  Expanded(
+                                    child: Center(
+                                    child: Row(
+                                      mainAxisAlignment: MainAxisAlignment.center,
+                                      children: [
+                                      Icon(
+                                        Icons.download,
+                                        color: secondaryColor,
+                                      ),
+                                      SizedBox(width: 10), // Add some spacing between the icon and text
+                                      Text(
+                                        'Installer l\'application', // Replace 'name' with a defined string
+                                        style: TextStyle(color: secondaryColor),
+                                        maxLines: 2,
+                                        overflow: TextOverflow.ellipsis,
+                                      ),
+                                      ],
+                                    ),
+                                    ),
+                                  ),
+                                  ],
+                                ),
+                                onTap: () {
+                                  bool isStandalone = js.context.callMethod('isStandalone');
+                                  if (!isStandalone) {
+                                  js.context.callMethod("launchApp");
+                                  }
+                                },
+                                ),
+                              )
+                              : Container(),
                           ],
                           ),
                         ),
-                        ),
-                      ],
+                      
+                        
+                      SizedBox(
+                        child: favList(),
                       ),
-                      onTap: () {
-                      bool isStandalone = js.context.callMethod('isStandalone');
-                      if (!isStandalone) {
-                        js.context.callMethod("launchApp");
-                      }
-                      },
-                    ),
-                    )
-                  : Container(),
-                ],
-              ),
-              ),
-              SizedBox(
-              child: favList(),
-              ),
-              SizedBox(
-              child: CustomAgenda(),
-              ),
-              SizedBox(
-              width: 400,
-              child: buildDropdownMenu(
-                'Salle', salleData, 'salle', this),
-              ),
-              const SizedBox(height: 10),
-              SizedBox(
-              width: 400,
-              child: buildDropdownMenu(
-                'Professeur', profData, 'prof', this),
-              ),
-              ...univData.map<Widget>((univ) {
-              return Column(
-                children: [
-                const SizedBox(height: 10),
-                SizedBox(
-                  width: 400,
-                  child: buildDropdownMenu(univ['nameUniv'],
-                    univ['timetable'], 'univ', this),
+                      SizedBox(
+                        child: CustomAgenda(),
+                      ),
+                      SizedBox(
+                        width: 400,
+                        child: buildDropdownMenu('Salle', salleData, 'salle', this),
+                      ),
+                      const SizedBox(height: 10),
+                      SizedBox(
+                        width: 400,
+                        child: buildDropdownMenu('Professeur', profData, 'prof', this),
+                      ),
+                      ...univData.map<Widget>((univ) {
+                        return Column(
+                          children: [
+                            const SizedBox(height: 10),
+                            SizedBox(
+                              width: 400,
+                              child: buildDropdownMenu(univ['nameUniv'], univ['timetable'], 'univ', this),
+                            ),
+                          ],
+                        );
+                      }).toList(),
+                    ],
+                  ),
                 ),
-                ],
-              );
-              }).toList(),
+              ),
             ],
-            ),
           ),
-          ),
-          ],
         ),
-        
-        
-
-        
-      ),
       ),
       backgroundColor: primaryColor,
     );
@@ -387,25 +358,26 @@ class _MyHomePageState extends State<MyHomePage> {
     showDialog(
       context: context,
       builder: (BuildContext context) {
-      return AlertDialog(
-        title: Text('Nous soutenir'),
-        content: Text('Vous semblez utiliser activement notre application ($launchCount lancement). Vous pouvez nous aider à intégrer cette application sur le Play Store / App Store. Souhaitez-vous faire un don ?'),
-        actions: [
-        TextButton(
-          child: Text('Plus tard'),
-          onPressed: () {
-          Navigator.of(context).pop();
-          },
-        ),
-        TextButton(
-            child: Text('Donner'),
-          onPressed: () {
-          launchUrl(Uri.parse('https://paypal.me/Infuseting27?country.x=FR&locale.x=fr_FR'), mode: LaunchMode.externalApplication);
-          Navigator.of(context).pop();
-          },
-        ),
-        ],
-      );
+        return AlertDialog(
+          title: Text('Nous soutenir'),
+          content: Text(
+              'Vous semblez utiliser activement notre application ($launchCount lancement). Vous pouvez nous aider à intégrer cette application sur le Play Store / App Store. Souhaitez-vous faire un don ?'),
+          actions: [
+            TextButton(
+              child: Text('Plus tard'),
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+            TextButton(
+              child: Text('Donner'),
+              onPressed: () {
+                launchUrl(Uri.parse('https://paypal.me/Infuseting27?country.x=FR&locale.x=fr_FR'), mode: LaunchMode.externalApplication);
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
+        );
       },
     );
   }
@@ -414,7 +386,6 @@ class _MyHomePageState extends State<MyHomePage> {
     if (text.length > 3) {
       List<String> words = text.split(" ");
       for (String word in words) {
-        
         if (!item.toLowerCase().contains(word.toLowerCase())) {
           return false;
         }
@@ -435,106 +406,103 @@ class _MyHomePageState extends State<MyHomePage> {
         } else {
           List<dynamic> custom = snapshot.data ?? [];
 
-            return Column(
+          return Column(
             children: [
-                Center(
+              Center(
                 child: Container(
-                width: 400,
-                child: Column(
-                children: [
-                  
-                  ...custom.map<Widget>((item) {
-                  
-                  
-                  String name = item['descTT'];
-                  int adeProjectID = item['adeProjectId'];
-                  int adeResources = item['adeResources'];
-                  String key = '$adeProjectID-$adeResources';
-                  return ListTile(
-                  title: Row(
-                    children: [
-                    const SizedBox(width: 10), // Add padding of 10 at left
-                    Center(
-                      child: FutureBuilder<bool>(
-                      future: CacheHelper.existCustom(key),
-                      builder: (context, snapshot) {
-                        if (snapshot.connectionState == ConnectionState.waiting) {
-                        return Icon(Icons.close, color: secondaryColor);
-                        } else if (snapshot.hasError) {
-                        return Icon(Icons.error, color: secondaryColor);
-                        } else {
-                        IconData iconData = Icons.close;
-                        return IconButton(
-                          icon: Icon(iconData),
-                          color: Colors.red,
-                          onPressed: () {
-                          setState(() {
-                            CacheHelper.removeFromCustom(adeResources.toString());  
-                          });
-                          },
-                        );
-                        }
-                      },
-                      ),
-                    ),
-                    Expanded(
-                      child: Text(
-                      name,
-                      style: TextStyle(color: secondaryColor),
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                      ),
-                    ),
-                    ],
-                  ),
-                  onTap: () {
-                    agendaOpen(adeProjectID, adeResources);
-                  },
-                  );
-                }).toList(),
-                SizedBox(
                   width: 400,
-                  child: ListTile(
-                    title: Row(
-                      children: [
-                        Expanded(
-                          child: Center(
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Icon(
-                                  Icons.add,
-                                  color: secondaryColor,
+                  child: Column(
+                    children: [
+                      ...custom.map<Widget>((item) {
+                        String name = item['descTT'];
+                        int adeProjectID = item['adeProjectId'];
+                        int adeResources = item['adeResources'];
+                        String key = '$adeProjectID-$adeResources';
+                        return ListTile(
+                          title: Row(
+                            children: [
+                              const SizedBox(width: 10), // Add padding of 10 at left
+                              Center(
+                                child: FutureBuilder<bool>(
+                                  future: CacheHelper.existCustom(key),
+                                  builder: (context, snapshot) {
+                                    if (snapshot.connectionState == ConnectionState.waiting) {
+                                      return Icon(Icons.close, color: secondaryColor);
+                                    } else if (snapshot.hasError) {
+                                      return Icon(Icons.error, color: secondaryColor);
+                                    } else {
+                                      IconData iconData = Icons.close;
+                                      return IconButton(
+                                        icon: Icon(iconData),
+                                        color: Colors.red,
+                                        onPressed: () {
+                                          setState(() {
+                                            CacheHelper.removeFromCustom(adeResources.toString());
+                                          });
+                                        },
+                                      );
+                                    }
+                                  },
                                 ),
-                                SizedBox(width: 10), // Add some spacing between the icon and text
-                                Text(
-                                  'Ajouter votre emploi du temps', // Replace 'name' with a defined string
+                              ),
+                              Expanded(
+                                child: Text(
+                                  name,
                                   style: TextStyle(color: secondaryColor),
                                   maxLines: 2,
                                   overflow: TextOverflow.ellipsis,
                                 ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
+                          onTap: () {
+                            agendaOpen(adeProjectID, adeResources);
+                          },
+                        );
+                      }).toList(),
+                      SizedBox(
+                        width: 400,
+                        child: ListTile(
+                          title: Row(
+                            children: [
+                              Expanded(
+                                child: Center(
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Icon(
+                                        Icons.add,
+                                        color: secondaryColor,
+                                      ),
+                                      SizedBox(width: 10), // Add some spacing between the icon and text
+                                      Text(
+                                        'Ajouter votre emploi du temps', // Replace 'name' with a defined string
+                                        style: TextStyle(color: secondaryColor),
+                                        maxLines: 2,
+                                        overflow: TextOverflow.ellipsis,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ],
+                          ),
+                          onTap: () {
+                            showCustomEdtPopup(context);
+                          },
                         ),
-                      ],
-                    ),
-                    onTap: () {
-                      showCustomEdtPopup(context);
-                    },
+                      )
+                    ],
                   ),
-                )
-                ]
                 ),
-                
-              ),
               ),
             ],
-            );
+          );
         }
       },
     );
   }
+
   Widget favList() {
     return FutureBuilder<List<dynamic>>(
       future: CacheHelper.getAllFromFav(),
@@ -546,78 +514,77 @@ class _MyHomePageState extends State<MyHomePage> {
         } else {
           List<dynamic> custom = snapshot.data ?? [];
 
-
-            return Column(
+          return Column(
             children: [
               Center(
-              child: Container(
-                width: 400,
-                child: Column(
-                children: custom.map<Widget>((item) {
-                  String name = item['descTT'];
-                  int adeProjectID = item['adeProjectId'];
-                  int adeResources = item['adeResources'];
-                  String key = '$adeProjectID-$adeResources';
-                  return ListTile(
-                  title: Row(
-                    children: [
-                    const SizedBox(width: 10), // Add padding of 10 at left
-                    Center(
-                      child: FutureBuilder<bool>(
-                      future: CacheHelper.existFav(key),
-                      builder: (context, snapshot) {
-                        if (snapshot.connectionState == ConnectionState.waiting) {
-                        return Icon(Icons.star_border, color: secondaryColor);
-                        } else if (snapshot.hasError) {
-                        return Icon(Icons.error, color: secondaryColor);
-                        } else {
-                        bool isFavorite = snapshot.data ?? false;
-                        IconData iconData = isFavorite ? Icons.star : Icons.star_border;
-                        return IconButton(
-                          icon: Icon(iconData),
-                          color: isFavorite ? Colors.yellow : secondaryColor,
-                          onPressed: () {
-                          setState(() {
-                            if (isFavorite) {
-                            CacheHelper.removeFromFav(key);
-                            } else {
-                            CacheHelper.addToFav(key, jsonEncode(item));
-                            }
-                            isFavorite = !isFavorite;
-                            iconData = isFavorite ? Icons.star : Icons.star_border;
-                          });
-                          },
-                        );
-                        }
-                      },
-                      ),
-                    ),
-                    Expanded(
-                      child: Text(
-                      name,
-                      style: TextStyle(color: secondaryColor),
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                      ),
-                    ),
-                    ],
+                child: Container(
+                  width: 400,
+                  child: Column(
+                    children: custom.map<Widget>((item) {
+                      String name = item['descTT'];
+                      int adeProjectID = item['adeProjectId'];
+                      int adeResources = item['adeResources'];
+                      String key = '$adeProjectID-$adeResources';
+                      return ListTile(
+                        title: Row(
+                          children: [
+                            const SizedBox(width: 10), // Add padding of 10 at left
+                            Center(
+                              child: FutureBuilder<bool>(
+                                future: CacheHelper.existFav(key),
+                                builder: (context, snapshot) {
+                                  if (snapshot.connectionState == ConnectionState.waiting) {
+                                    return Icon(Icons.star_border, color: secondaryColor);
+                                  } else if (snapshot.hasError) {
+                                    return Icon(Icons.error, color: secondaryColor);
+                                  } else {
+                                    bool isFavorite = snapshot.data ?? false;
+                                    IconData iconData = isFavorite ? Icons.star : Icons.star_border;
+                                    return IconButton(
+                                      icon: Icon(iconData),
+                                      color: isFavorite ? Colors.yellow : secondaryColor,
+                                      onPressed: () {
+                                        setState(() {
+                                          if (isFavorite) {
+                                            CacheHelper.removeFromFav(key);
+                                          } else {
+                                            CacheHelper.addToFav(key, jsonEncode(item));
+                                          }
+                                          isFavorite = !isFavorite;
+                                          iconData = isFavorite ? Icons.star : Icons.star_border;
+                                        });
+                                      },
+                                    );
+                                  }
+                                },
+                              ),
+                            ),
+                            Expanded(
+                              child: Text(
+                                name,
+                                style: TextStyle(color: secondaryColor),
+                                maxLines: 2,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ),
+                          ],
+                        ),
+                        onTap: () {
+                          agendaOpen(adeProjectID, adeResources);
+                        },
+                      );
+                    }).toList(),
                   ),
-                  onTap: () {
-                    agendaOpen(adeProjectID, adeResources);
-                  },
-                  );
-                }).toList(),
                 ),
               ),
-              ),
             ],
-            );
+          );
         }
       },
     );
   }
 
-  Widget buildDropdownMenu(
+Widget buildDropdownMenu(
       String title, List<dynamic> items, String itemType, State state) {
     int itemsToShow = 20;
     if (title != 'Professeur' && title != 'Salle') {
@@ -648,11 +615,10 @@ class _MyHomePageState extends State<MyHomePage> {
               ),
             ],
           ),
-          iconColor:
-              secondaryColor, // Set the down icon color to secondaryColor
+          iconColor: secondaryColor,
           children: [
             SizedBox(
-              height: 200, // Set a fixed height for the scrollable area
+              height: 200,
               child: NotificationListener<ScrollNotification>(
                 onNotification: (ScrollNotification scrollInfo) {
                   if (scrollInfo.metrics.pixels ==
@@ -708,7 +674,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                           color: isFavorite
                                               ? Colors.yellow
                                               : secondaryColor,
-                                          onPressed: () {
+                                          onPressed: () async {
                                             setState(() {
                                               if (isFavorite) {
                                                 CacheHelper.removeFromFav(key);
@@ -736,7 +702,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   ),
                                 ],
                               ),
-                              onTap: () { 
+                              onTap: () {
                                 agendaOpen(adeProjectID, adeResources);
                               },
                             );
@@ -762,216 +728,208 @@ class _MyHomePageState extends State<MyHomePage> {
       },
     );
   }
-  void showCustomEdtPopup(BuildContext context) {
-      TextEditingController projectNameController = TextEditingController();
-      TextEditingController resourcesController = TextEditingController();
-      int currentStep = 0;
-      showDialog(
-        context: context,
-        builder: (BuildContext context) {
-            return StatefulBuilder(
-            builder: (BuildContext context, StateSetter setState) {
 
-                return SizedBox(
-                width: double.infinity,
-                height: double.infinity,
+  void showCustomEdtPopup(BuildContext context) {
+    TextEditingController projectNameController = TextEditingController();
+    TextEditingController resourcesController = TextEditingController();
+    int currentStep = 0;
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return StatefulBuilder(
+          builder: (BuildContext context, StateSetter setState) {
+            return SizedBox(
+              width: double.infinity,
+              height: double.infinity,
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                Align(
-                  alignment: Alignment.topRight,
-                  child: IconButton(
-                  icon: Icon(Icons.close),
-                  onPressed: () {
-                    Navigator.of(context).pop();
-                  },
+                  Align(
+                    alignment: Alignment.topRight,
+                    child: IconButton(
+                      icon: Icon(Icons.close),
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
+                    ),
                   ),
-                ),
-                Material(
-                  child: Stepper(
-                    currentStep: currentStep,
-                    onStepContinue: () {
-                      print(currentStep);
-                      if (currentStep < 3) {
-                        setState(() {
-                          if (currentStep == 1) {
-                            if (resourcesController.text.length == 13 && RegExp(r'^\d+$').hasMatch(resourcesController.text)) {
+                  Material(
+                    child: Stepper(
+                      currentStep: currentStep,
+                      onStepContinue: () {
+                        if (currentStep < 3) {
+                          setState(() {
+                            if (currentStep == 1) {
+                              if (resourcesController.text.length == 13 &&
+                                  RegExp(r'^\d+$')
+                                      .hasMatch(resourcesController.text)) {
+                                currentStep += 1;
+                              } else {
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
+                                    content: Text(
+                                        'ID invalide. Veuillez entrer un ID numérique de 13 chiffres.'),
+                                    backgroundColor: Colors.red,
+                                  ),
+                                );
+                              }
+                            } else {
                               currentStep += 1;
                             }
-                            else{
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                SnackBar(
-                                    content: Text('ID invalide. Veuillez entrer un ID numérique de 13 chiffres.'),
-                                  backgroundColor: Colors.red,
+                          });
+                        } else {
+                          String leocardID = resourcesController.text;
+                          String name = projectNameController.text;
+                          int last8Digits =
+                              int.parse(leocardID.substring(leocardID.length - 8));
+                          Map<String, dynamic> customAgenda = {
+                            "numUniv": 1,
+                            "descTT": name,
+                            "adeUniv":
+                                "http://proxyade.unicaen.fr/ZimbraIcs/etudiant/",
+                            "adeResources": last8Digits,
+                            "adeProjectId": 2023
+                          };
+                          CacheHelper.addToCustom(
+                              '$last8Digits', jsonEncode(customAgenda));
+                          Navigator.of(context).pop();
+                        }
+                      },
+                      onStepCancel: () {
+                        if (currentStep > 0) {
+                          setState(() {
+                            currentStep -= 1;
+                          });
+                        } else {
+                          Navigator.of(context).pop();
+                        }
+                      },
+                      steps: [
+                        Step(
+                          title: Text('Etape 1'),
+                          content: Column(
+                            children: [
+                              SizedBox(height: 16),
+                              GestureDetector(
+                                onTap: () {
+                                  launchUrl(Uri.parse(
+                                      'https://moncomptenumerique.unicaen.fr/compte/gerer'));
+                                },
+                                child: Text(
+                                  'Obtenez votre identifiant leocard (Copiez-le)',
+                                  style: TextStyle(color: Colors.blue),
                                 ),
-                                );
-                            }
-                          }
-                          else {
-                            currentStep +=1;
-                          }
-                        
-                        });
-                      } else {
-                        // Handle form submission
-                        String leocardID = resourcesController.text;
-                        String name = projectNameController.text;
-                        int last8Digits = int.parse(leocardID.substring(leocardID.length - 8));
-                        Map<String, dynamic> customAgenda = {
-                          "numUniv": 1,
-                          "descTT": name,
-                          "adeUniv": "http://proxyade.unicaen.fr/ZimbraIcs/etudiant/",
-                          "adeResources": last8Digits,
-                          "adeProjectId": 2023
-                        };
-                        print(jsonEncode(customAgenda));
-                        CacheHelper.addToCustom('$last8Digits', jsonEncode(customAgenda));
-                        // Add your logic to handle the input values here
-                        Navigator.of(context).pop();
-                      }
-                    },
-                    onStepCancel: () {
-                      if (currentStep > 0) {
-                        setState(() {
-                          currentStep -= 1;
-                        });
-                      } else {
-                        Navigator.of(context).pop();
-                      }
-                    },
-                    steps: [
-                      Step(
-                        title: Text('Etape 1'),
-                        content: Column(
-                          children: [
-                          SizedBox(height: 16),
-                          GestureDetector(
-                            onTap: () {
-                            launchUrl(Uri.parse('https://moncomptenumerique.unicaen.fr/compte/gerer'));
-                            },
-                            child: Text(
-                            'Obtenez votre identifiant leocard (Copiez-le)',
-                            style: TextStyle(color: Colors.blue),
-                            ),
+                              ),
+                              SizedBox(height: 16),
+                            ],
                           ),
-                          SizedBox(height: 16),
-                          ],
+                          isActive: currentStep == 0,
                         ),
-                        isActive: currentStep == 0,
-                      ),
-                      Step(
-                        title: Text('Etape 2'),
-                        content: Column(
-                          children: [
-                          SizedBox(height: 16),
-                          TextField(
-                            controller: resourcesController,
-                            decoration: InputDecoration(labelText: 'Entrez votre identifiant'),
-                            
+                        Step(
+                          title: Text('Etape 2'),
+                          content: Column(
+                            children: [
+                              SizedBox(height: 16),
+                              TextField(
+                                controller: resourcesController,
+                                decoration: InputDecoration(
+                                    labelText: 'Entrez votre identifiant'),
+                              ),
+                              SizedBox(height: 16),
+                            ],
                           ),
-                          SizedBox(height: 16),
-                          ],
+                          isActive: currentStep == 1,
                         ),
-
-                        
-                        isActive: currentStep == 1,
-                      ),
-                      Step(
-                        title: Text('Etape 3'),
-                        content: Column(
-                          children: [
-                          SizedBox(height: 16),
-                          TextField(
-                            controller: projectNameController,
-                            decoration: InputDecoration(labelText: 'Entrez le nom de cet agenda personnalisé'),
+                        Step(
+                          title: Text('Etape 3'),
+                          content: Column(
+                            children: [
+                              SizedBox(height: 16),
+                              TextField(
+                                controller: projectNameController,
+                                decoration: InputDecoration(
+                                    labelText:
+                                        'Entrez le nom de cet agenda personnalisé'),
+                              ),
+                              SizedBox(height: 16),
+                            ],
                           ),
-                          SizedBox(height: 16),
-                          ],
+                          isActive: currentStep == 2,
                         ),
-                        isActive: currentStep == 2,
-                      ),
-                      Step(
-                        title: Text('Etape 4'),
-                        content: Column(
-                          children: [
-                          SizedBox(height: 16),
-                            Text(
-                            'Votre identifiant : ${resourcesController.text}',
-                            ),
-                            Text(
-                            'Nom de l\'agenda : ${projectNameController.text}'
-                            ),
-                            Text(
-                            'Vous devez redémarrer l\'application après avoir confirmé cela',
-                            style: TextStyle(color: Colors.red)
-                            ),
-                            GestureDetector(
-                            onTap: () {
-                            launchUrl(Uri.parse('https://www.instagram.com/arthur_mimir/'));
-                            },
-                            child: Text(
-                            'En cas de probleme contacté moi sur Instagram (Cliquez-ici)',
-                            style: TextStyle(color: Colors.blue),
-                            ),
-                          ),
-                            SizedBox(height: 16),
+                        Step(
+                          title: Text('Etape 4'),
+                          content: Column(
+                            children: [
+                              SizedBox(height: 16),
+                              Text(
+                                'Votre identifiant : ${resourcesController.text}',
+                              ),
+                              Text(
+                                  'Nom de l\'agenda : ${projectNameController.text}'),
+                              Text(
+                                'Vous devez redémarrer l\'application après avoir confirmé cela',
+                                style: TextStyle(color: Colors.red),
+                              ),
+                              GestureDetector(
+                                onTap: () {
+                                  launchUrl(Uri.parse(
+                                      'https://www.instagram.com/arthur_mimir/'));
+                                },
+                                child: Text(
+                                  'En cas de probleme contacté moi sur Instagram (Cliquez-ici)',
+                                  style: TextStyle(color: Colors.blue),
+                                ),
+                              ),
+                              SizedBox(height: 16),
                             ],
                           ),
                           isActive: currentStep == 3,
-                          ),
-                        ],
                         ),
-                ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
-              );
-            },
             );
-          });
-        }
-  
-    
-  
-
-  void loadAgenda(int adeProjectID, int adeResources) {
-    // Implement your logic to load and display the agenda here.
-    // This function should handle the UI and data fetching for the agenda.
-    // For example, you might navigate to a new screen that displays the agenda.
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (context) => AgendaPage(adeProjectID: adeProjectID, adeResources: adeResources),
-      ),
+          },
+        );
+      },
     );
   }
+
   Future<void> agendaOpen(int adeProjectID, int adeResources) async {
-  //On download 30 cours mais on en affiche que 15 donc on verifie que les 15 derniers cours.
     String key = "$adeProjectID-$adeResources";
-    // Show loader page
     showDialog(
       context: context,
       barrierDismissible: false,
       builder: (BuildContext context) {
-      return Center(
-        child: CircularProgressIndicator(),
-      );
+        return Center(
+          child: CircularProgressIndicator(),
+        );
       },
     );
-    if (await CacheHelper.existSave(key)) {    
+    if (await CacheHelper.existSave(key)) {
       if (await hasInternetConnection()) {
         await checkUpdate(adeProjectID, adeResources);
       }
-    }
-    else {
+    } else {
       if (await hasInternetConnection()) {
         await checkUpdate(adeProjectID, adeResources);
-      }
-      else {
+      } else {
         return;
       }
-    }   
-    Navigator.of(context).pop(); // Close the loader dialog
+    }
+    Navigator.of(context).pop();
     loadAgenda(adeProjectID, adeResources);
   }
-  
+    void loadAgenda(int adeProjectID, int adeResources) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) =>
+            AgendaPage(adeProjectID: adeProjectID, adeResources: adeResources),
+      ),
+    );
+  }
+
 }

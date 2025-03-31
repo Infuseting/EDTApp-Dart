@@ -81,7 +81,9 @@ class _AgendaPageState extends State<AgendaPage> {
               icon: const Icon(Icons.link),
               color: primaryColor,
               onPressed: () {
-          String edtLink = "https://edt.infuseting.fr/update/myEDT.php?adeBase=${widget.adeProjectID}&adeRessources=${widget.adeResources}";
+            String edtLink;
+            edtLink = "https://edt.infuseting.fr/update/myEDT.php?adeBase=${widget.adeProjectID}&adeRessources=${widget.adeResources}";
+            
           Clipboard.setData(ClipboardData(text: edtLink));
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(content: Text('Fichier Agenda copié')),
@@ -105,7 +107,7 @@ class _AgendaPageState extends State<AgendaPage> {
                   String format = DateFormat('yyyy-MM-dd').format(currentDay);
                   var dayEvents = save[format];
                   if (dayEvents != null && dayEvents.isNotEmpty && dayEvents['content'].isNotEmpty) {
-                    DateTime timeLast = DateTime(currentDay.year, currentDay.month, currentDay.day, 6, 0, 0);
+                    DateTime timeLast = DateTime(currentDay.year, currentDay.month, currentDay.day, 6, 0, 0).toUtc().add(Duration(hours: DateTime.now().timeZoneOffset.inHours));
                     String dayName = DateFormat('EEEE').format(currentDay);
                     const dayNames = {
                       'Monday': 'Lundi',
@@ -169,9 +171,9 @@ class _AgendaPageState extends State<AgendaPage> {
                             Pair<Color, Color> colorPair = colorChooser(event);
                             Color colorFirst = colorPair.first;
                             Color colorScnd = colorPair.second;
-                            double calculatedHeight = heightCalc(event);
+                            double calculatedHeight = heightCalc(event, widget.adeProjectID);
 
-                            var results = topCalc(event, timeLast);
+                            var results = topCalc(widget.adeProjectID, event, timeLast);
                             timeLast = results[1];
                             double topPadding = results[0];
                             return Padding(
@@ -218,7 +220,7 @@ class _AgendaPageState extends State<AgendaPage> {
                                     ),
                                   ),
                                   Text(
-                                    "${parseTime(event["DTSTART"] ?? "")} - ${parseTime(event["DTEND"] ?? "")}",
+                                    "${parseTimeToString(event["DTSTART"] ?? "", widget.adeProjectID)} - ${parseTimeToString(event["DTEND"] ?? "", widget.adeProjectID)}",
                                     textAlign: TextAlign.center,
                                     overflow: TextOverflow.clip,
                                     style: TextStyle(
@@ -343,27 +345,34 @@ class _AgendaPageState extends State<AgendaPage> {
     return time1.compareTo(time2);
   }
 
-  double heightCalc(dynamic event) {
-    DateTime startTime = DateFormat("HH:mm").parse(parseTime(event["DTSTART"]!));
-    DateTime endTime = DateFormat("HH:mm").parse(parseTime(event["DTEND"]!));
+  double heightCalc(dynamic event, int adeId) {
+    DateTime startTime = DateFormat("HH:mm").parse(parseTime(event["DTSTART"]!, adeId));
+    DateTime endTime = DateFormat("HH:mm").parse(parseTime(event["DTEND"]!, adeId));
     int duration = endTime.difference(startTime).inMinutes;
     return duration.toDouble();
   }
 
-  List<dynamic> topCalc(dynamic event, DateTime lastEndTime) {
+  List<dynamic> topCalc(int adeId, dynamic event, DateTime lastEndTime) {
     //print("Calculating top padding for event: $event with last end time: $lastEndTime");
-    DateTime startTime = DateFormat("HH:mm").parse(parseTime(event["DTSTART"]!));
+    DateTime startTime = DateFormat("HH:mm").parse(parseTime(event["DTSTART"]!, adeId));
     print("Start time: $startTime");
-    DateTime endTime = DateFormat("HH:mm").parse(parseTime(event["DTEND"]!));
+    DateTime endTime = DateFormat("HH:mm").parse(parseTime(event["DTEND"]!, adeId));
     print("End time: $endTime");
     
-    DateTime adjustedStartTime = startTime.subtract(Duration(hours: 8));
+    DateTime adjustedStartTime = startTime.subtract(
+      Duration(hours: 8 - DateTime.now().timeZoneOffset.inHours),
+    );
     print("Adjusted Start time : $adjustedStartTime");
-    DateTime adjustedLastEndTime = lastEndTime.subtract(Duration(hours: 6));
+    DateTime adjustedLastEndTime = lastEndTime.subtract(
+      Duration(hours: 6 - DateTime.now().timeZoneOffset.inHours - (adeId == 1 && lastEndTime.hour >= 8 ? 1 : 0)),
+    );
     print("Adjusted End Time : $adjustedLastEndTime");
     
     int startMinutes = adjustedStartTime.hour * 60 + adjustedStartTime.minute;
     int lastEndMinutes = adjustedLastEndTime.hour * 60 + adjustedLastEndTime.minute;
+
+    print("Start Minutes: $startMinutes, Last End Minutes: $lastEndMinutes");
+
     
     double topPadding = startMinutes.toDouble();
     double diffEndStart = lastEndMinutes.toDouble();
@@ -373,12 +382,35 @@ class _AgendaPageState extends State<AgendaPage> {
     return [topPadding - diffEndStart, newLastEndTime];
   }
 
-  String parseTime(String times) {
-    //print("Parsing time: $times");
+  String parseTime(String times, int adeId) {
     final parsedTime = parseTimestampRQST(times);
-    //print("Parsed time: $parsedTime");
     final outputFormatter = DateFormat("HH:mm");
-    final adjustedTime = parsedTime.add(Duration(hours: 2));
+    var adjustedTime = parsedTime;
+    
+    final parisTimeZone = DateTime.now().timeZoneOffset.inHours;
+    if (adeId == 1) {
+      adjustedTime = parsedTime.add(Duration(hours: parisTimeZone + 1));
+    } else {
+      adjustedTime = parsedTime.add(Duration(hours: parisTimeZone));
+    }
+    
+
+    return outputFormatter.format(adjustedTime);
+  }
+  String parseTimeToString(String times, int adeId) {
+    final parsedTime = parseTimestampRQST(times);
+    final outputFormatter = DateFormat("HH:mm");
+
+    final parisTimeZone = DateTime.now().timeZoneOffset.inHours;
+    var adjustedTime = parsedTime;
+    
+    if (adeId == 1) {
+      adjustedTime = parsedTime.add(Duration(hours: parisTimeZone + 1));
+    } else {
+      adjustedTime = parsedTime.add(Duration(hours: parisTimeZone));
+    }
+    
+
     return outputFormatter.format(adjustedTime);
   }
 }

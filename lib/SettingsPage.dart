@@ -3,6 +3,7 @@ import 'package:universal_html/js.dart' as js;
 import 'package:url_launcher/url_launcher.dart';
 import 'util/cacheManager.dart';
 import 'util/darkMode.dart';
+import 'package:flutter/foundation.dart';
 class SettingsPage extends StatefulWidget {
   const SettingsPage({Key? key}) : super(key: key);
 
@@ -46,13 +47,26 @@ class _SettingsPageState extends State<SettingsPage> {
     });
   }
 
+  Future<String> getAppVersion() async {
+    // Implement your logic to get the app version here
+    return '1.4.4';
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(
-            'Paramètres | Version : ' + js.context.callMethod('getVersion'),
-          style: TextStyle(color: primaryColor),
+        title: FutureBuilder<String>(
+          future: getAppVersion(),
+          builder: (context, snapshot) {
+            final version = snapshot.data ?? 'loading...';
+            return Text(
+              kIsWeb 
+                ? 'Paramètres | Version : ${js.context.callMethod('getVersion').toString()}'
+                : 'Paramètres | Version : $version',
+              style: TextStyle(color: primaryColor),
+            );
+          },
         ),
         backgroundColor: secondaryColor,
         iconTheme: IconThemeData(
@@ -223,7 +237,7 @@ class _SettingsPageState extends State<SettingsPage> {
                           ),
                         ),
                         SizedBox(height: 8.0),
-                        GestureDetector(
+                        if (kIsWeb) GestureDetector(
                           onTap: () {
                           js.context.callMethod("launchApp");
                           },
