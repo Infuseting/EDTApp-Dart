@@ -18,9 +18,7 @@ function parse_event_data($docstring, $adeBase) {
             if (($key == "DTSTART" || $key == "DTEND")) {
                 
                 if ($adeBase == 2024 || $adeBase == 2023) {                
-                    $dt = new DateTime($value, new DateTimeZone('Europe/Paris'));
-                    $dt->setTimezone(new DateTimeZone('Europe/Paris'));
-                    $value = $dt->format('Ymd\THis');
+                    $value = trim($value);
                 }
                 else {
                     

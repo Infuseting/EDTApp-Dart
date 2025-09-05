@@ -82,11 +82,13 @@ Future<Map<String, dynamic>> fetchJsonData(String url) async {
     print("MD5 Comparator for $url : " + md5Server + " " + md5Local); 
     if (md5Server != md5Local) {
       final response = await http.get(Uri.parse('$jsonBaseUrl$url'));
+      print('$jsonBaseUrl$url');  
       if (response.statusCode == 200) {
         String local = await CacheHelper.getEventList(url) ?? '';
         print("MD5 Comparator Local for $url : " + local);
         print("MD5 Comparator Server for $url : " + utf8.decode(response.bodyBytes));
         CacheHelper.addEventList(url, utf8.decode(response.bodyBytes));
+        print(await CacheHelper.getEventList(url));
         return json.decode(utf8.decode(response.bodyBytes));
       } else {
         throw Exception('Failed to load data');

@@ -107,30 +107,10 @@ class _AgendaPageState extends State<AgendaPage> {
                   String format = DateFormat('yyyy-MM-dd').format(currentDay);
                   var dayEvents = save[format];
                   if (dayEvents != null && dayEvents.isNotEmpty && dayEvents['content'].isNotEmpty) {
-                    // compute Paris offset (UTC -> Europe/Paris), taking DST into account
-                    int lastSundayOfMonth(int year, int month) {
-                      DateTime firstDayNextMonth = DateTime(year, month + 1, 1);
-                      DateTime lastDay = firstDayNextMonth.subtract(Duration(days: 1));
-                      int weekday = lastDay.weekday; // Mon=1 .. Sun=7
-                      int daysToSunday = weekday % 7;
-                      return lastDay.day - daysToSunday;
-                    }
-
-                    int parisUtcOffsetHours(DateTime date) {
-                      final int year = date.year;
-                      final DateTime dstStart = DateTime(year, 3, lastSundayOfMonth(year, 3)); // last Sunday of March
-                      final DateTime dstEnd = DateTime(year, 10, lastSundayOfMonth(year, 10)); // last Sunday of October
-                      // DST is active from the last Sunday of March (inclusive) to the last Sunday of October (exclusive)
-                      if (!date.isBefore(dstStart) && date.isBefore(dstEnd)) {
-                        return 2; // CEST (UTC+2)
-                      }
-                      return 1; // CET (UTC+1)
-                    }
-
-                    final int parisOffset = parisUtcOffsetHours(currentDay);
+                    
                     // timeLast = midnight at UTC then shifted to Paris local midnight
-                    DateTime timeLast = DateTime.utc(currentDay.year, currentDay.month, currentDay.day, 6, 0, 0)
-                        .add(Duration(hours: parisOffset));
+                    DateTime timeLast = DateTime.utc(currentDay.year, currentDay.month, currentDay.day, 8, 0, 0);
+                        
                     String dayName = DateFormat('EEEE').format(currentDay);
                     const dayNames = {
                       'Monday': 'Lundi',
@@ -402,8 +382,8 @@ class _AgendaPageState extends State<AgendaPage> {
     print("Calculated Top Padding: ${topPadding - diffEndStart}");
     
     DateTime newLastEndTime = parseTimestampRQST(event["DTEND"]!, adeId);
-    
-    return [topPadding - diffEndStart, newLastEndTime];
+
+    return [topPadding - diffEndStart > 0 ? topPadding - diffEndStart : 0, newLastEndTime];
   }
 
   String parseTime(String times, int adeId) {
@@ -416,10 +396,7 @@ class _AgendaPageState extends State<AgendaPage> {
   String parseTimeToString(String times, int adeId) {
     final parsedTime = parseTimestampRQST(times, adeId);
     final outputFormatter = DateFormat("HH:mm");
-
     var adjustedTime = parsedTime;
-    
-
     return outputFormatter.format(adjustedTime);
   }
 }
