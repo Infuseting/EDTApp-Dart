@@ -107,7 +107,30 @@ class _AgendaPageState extends State<AgendaPage> {
                   String format = DateFormat('yyyy-MM-dd').format(currentDay);
                   var dayEvents = save[format];
                   if (dayEvents != null && dayEvents.isNotEmpty && dayEvents['content'].isNotEmpty) {
-                    DateTime timeLast = DateTime(currentDay.year, currentDay.month, currentDay.day, 6, 0, 0).toUtc().add(Duration(hours: DateTime.now().timeZoneOffset.inHours));
+                    // compute Paris offset (UTC -> Europe/Paris), taking DST into account
+                    int lastSundayOfMonth(int year, int month) {
+                      DateTime firstDayNextMonth = DateTime(year, month + 1, 1);
+                      DateTime lastDay = firstDayNextMonth.subtract(Duration(days: 1));
+                      int weekday = lastDay.weekday; // Mon=1 .. Sun=7
+                      int daysToSunday = weekday % 7;
+                      return lastDay.day - daysToSunday;
+                    }
+
+                    int parisUtcOffsetHours(DateTime date) {
+                      final int year = date.year;
+                      final DateTime dstStart = DateTime(year, 3, lastSundayOfMonth(year, 3)); // last Sunday of March
+                      final DateTime dstEnd = DateTime(year, 10, lastSundayOfMonth(year, 10)); // last Sunday of October
+                      // DST is active from the last Sunday of March (inclusive) to the last Sunday of October (exclusive)
+                      if (!date.isBefore(dstStart) && date.isBefore(dstEnd)) {
+                        return 2; // CEST (UTC+2)
+                      }
+                      return 1; // CET (UTC+1)
+                    }
+
+                    final int parisOffset = parisUtcOffsetHours(currentDay);
+                    // timeLast = midnight at UTC then shifted to Paris local midnight
+                    DateTime timeLast = DateTime.utc(currentDay.year, currentDay.month, currentDay.day, 6, 0, 0)
+                        .add(Duration(hours: parisOffset));
                     String dayName = DateFormat('EEEE').format(currentDay);
                     const dayNames = {
                       'Monday': 'Lundi',
@@ -168,7 +191,7 @@ class _AgendaPageState extends State<AgendaPage> {
                           ),
                           child: Column(
                           children: dayEvents['content'].map<Widget>((event) {
-                            Pair<Color, Color> colorPair = colorChooser(event);
+                            Pair<Color, Color> colorPair = colorChooser(event, widget.adeProjectID);
                             Color colorFirst = colorPair.first;
                             Color colorScnd = colorPair.second;
                             double calculatedHeight = heightCalc(event, widget.adeProjectID);
@@ -280,10 +303,10 @@ class _AgendaPageState extends State<AgendaPage> {
     return formattedDate;
   }
 
-  Pair<Color, Color> colorChooser(dynamic element) {
+  Pair<Color, Color> colorChooser(dynamic element, int adeId) {
     int currentTimeStamp = getCurrentTimestamp();
     String endClass = element["DTEND"];
-    if (compareTimestamps(currentTimeStamp, endClass) > 0) {
+    if (compareTimestamps(currentTimeStamp, endClass, adeId) > 0) {
       return Pair(Color(0xFFA9A9A9), Colors.black);
     }
     if (element["SUMMARY"].toString().contains("SAÉ")) {
@@ -319,14 +342,14 @@ class _AgendaPageState extends State<AgendaPage> {
     int timestamp = DateTime.now().millisecondsSinceEpoch;
     return timestamp;
   }
-  DateTime parseTimestampRQST(String timestamp) {
+  DateTime parseTimestampRQST(String timestamp, int adeId) {
     // Remove the 'Z' at the end to avoid issues with the format parser.
     timestamp = timestamp.replaceAll('Z', '').replaceAll('T', '');
     final formatter = DateFormat("yyyy-MM-dd HH:mm:ss");
     String year = timestamp.substring(0, 4);
     String month = timestamp.substring(4, 6);
     String day = timestamp.substring(6, 8);
-    String hour = timestamp.substring(8, 10);
+    String hour = (int.parse(timestamp.substring(8, 10))).toString();
     String minute = timestamp.substring(10, 12);
     String second = timestamp.substring(12, 14);
     return formatter.parse("$year-$month-$day $hour:$minute:$second");
@@ -338,10 +361,9 @@ class _AgendaPageState extends State<AgendaPage> {
     return DateFormat("yyyy-MM-dd HH:mm:ss").parse(timestamp);
   }
   
-  int compareTimestamps(int timestamp1, String timestamp2) {
+  int compareTimestamps(int timestamp1, String timestamp2, int adeId) {
     DateTime time1 = DateTime.fromMillisecondsSinceEpoch(timestamp1);
-    DateTime time2 = parseTimestampRQST(timestamp2);
-    time2 = time2.add(Duration(hours: 2));
+    DateTime time2 = parseTimestampRQST(timestamp2, adeId);
     return time1.compareTo(time2);
   }
 
@@ -360,55 +382,42 @@ class _AgendaPageState extends State<AgendaPage> {
     print("End time: $endTime");
     
     DateTime adjustedStartTime = startTime.subtract(
-      Duration(hours: 8 - DateTime.now().timeZoneOffset.inHours),
+      Duration(hours: 8),
     );
     print("Adjusted Start time : $adjustedStartTime");
+    print("lastEndTime : $lastEndTime");
     DateTime adjustedLastEndTime = lastEndTime.subtract(
-      Duration(hours: 6 - DateTime.now().timeZoneOffset.inHours - (adeId == 1 && lastEndTime.hour >= 8 ? 1 : 0)),
+      Duration(hours: 8),
     );
     print("Adjusted End Time : $adjustedLastEndTime");
     
     int startMinutes = adjustedStartTime.hour * 60 + adjustedStartTime.minute;
     int lastEndMinutes = adjustedLastEndTime.hour * 60 + adjustedLastEndTime.minute;
-
     print("Start Minutes: $startMinutes, Last End Minutes: $lastEndMinutes");
 
     
     double topPadding = startMinutes.toDouble();
     double diffEndStart = lastEndMinutes.toDouble();
+    print("Top Padding: $topPadding, Diff End Start: $diffEndStart");
+    print("Calculated Top Padding: ${topPadding - diffEndStart}");
     
-    DateTime newLastEndTime = parseTimestampRQST(event["DTEND"]!);
+    DateTime newLastEndTime = parseTimestampRQST(event["DTEND"]!, adeId);
     
     return [topPadding - diffEndStart, newLastEndTime];
   }
 
   String parseTime(String times, int adeId) {
-    final parsedTime = parseTimestampRQST(times);
+    final parsedTime = parseTimestampRQST(times, adeId);
     final outputFormatter = DateFormat("HH:mm");
     var adjustedTime = parsedTime;
-    
-    final parisTimeZone = DateTime.now().timeZoneOffset.inHours;
-    if (adeId == 1) {
-      adjustedTime = parsedTime.add(Duration(hours: parisTimeZone + 1));
-    } else {
-      adjustedTime = parsedTime.add(Duration(hours: parisTimeZone));
-    }
-    
 
     return outputFormatter.format(adjustedTime);
   }
   String parseTimeToString(String times, int adeId) {
-    final parsedTime = parseTimestampRQST(times);
+    final parsedTime = parseTimestampRQST(times, adeId);
     final outputFormatter = DateFormat("HH:mm");
 
-    final parisTimeZone = DateTime.now().timeZoneOffset.inHours;
     var adjustedTime = parsedTime;
-    
-    if (adeId == 1) {
-      adjustedTime = parsedTime.add(Duration(hours: parisTimeZone + 1));
-    } else {
-      adjustedTime = parsedTime.add(Duration(hours: parisTimeZone));
-    }
     
 
     return outputFormatter.format(adjustedTime);

@@ -49,7 +49,7 @@ class _SettingsPageState extends State<SettingsPage> {
 
   Future<String> getAppVersion() async {
     // Implement your logic to get the app version here
-    return '1.4.4';
+    return '1.4.5';
   }
 
   @override

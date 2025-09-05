@@ -18,11 +18,16 @@ function parse_event_data($docstring, $adeBase) {
             if (($key == "DTSTART" || $key == "DTEND")) {
                 
                 if ($adeBase == 2024 || $adeBase == 2023) {                
-                    $value = date('Ymd\THis', strtotime($value) - 2 * 3600);
+                    $dt = new DateTime($value, new DateTimeZone('Europe/Paris'));
+                    $dt->setTimezone(new DateTimeZone('Europe/Paris'));
+                    $value = $dt->format('Ymd\THis');
                 }
                 else {
-                    $isDaylightSaving = (bool)date('I', strtotime($value));
-                    $value = date('Ymd\THis', strtotime($value) - ($isDaylightSaving ? 2 : 1) * 3600);
+                    
+                    $dt = new DateTime($value, new DateTimeZone('Europe/Paris'));
+                    $dt->setTimezone(new DateTimeZone('Europe/Paris'));
+                    $value = $dt->format('Ymd\THis');
+                    
                 }
                 
             }
@@ -57,6 +62,7 @@ $adeBase = $_GET['adeBase'] ?? null;
 $adeRessources = $_GET['adeRessources'] ?? null;
 $lastUpdate = $_GET['lastUpdate'] ?? null;
 $day = $_GET['date'] ?? null;
+//http://127.0.0.1:3300/?adeBase=2024&adeRessources=8920&lastUpdate=0&day=30
 
 if ($adeBase === null || $adeRessources === null || $lastUpdate === null || $day === null) {
     http_response_code(400);
@@ -69,6 +75,7 @@ if (!is_dir($folderPath)) {
 if (!file_exists("{$folderPath}/file.json")) {
     file_put_contents("{$folderPath}/file.json", json_encode([]));
 }
+
 $date = DateTime::createFromFormat('Y-m-d', $day);
 
 header('Content-Type: application/json');
