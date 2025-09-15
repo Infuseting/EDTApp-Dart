@@ -75,14 +75,14 @@ Future<String> md5calc(String input) async {
 }
 
 Future<Map<String, dynamic>> fetchJsonData(String url) async {
-  final getMD5 = await http.get(Uri.parse('$jsonBaseUrl?fileName=$url'));
+  final getMD5 = await http.get(Uri.parse('$jsonBaseUrl?fileName=$url&noCache=${DateTime.now().millisecondsSinceEpoch}'));
   if (getMD5.statusCode == 200) {
     String md5Server = json.decode(getMD5.body)['hash'];
     String md5Local = await md5calc(url);
     print("MD5 Comparator for $url : " + md5Server + " " + md5Local); 
     if (md5Server != md5Local) {
-      final response = await http.get(Uri.parse('$jsonBaseUrl$url'));
-      print('$jsonBaseUrl$url');  
+      final response = await http.get(Uri.parse('${jsonBaseUrl}${url}?noCache=${DateTime.now().millisecondsSinceEpoch}'));
+      print('${jsonBaseUrl}${url}?noCache=${DateTime.now().millisecondsSinceEpoch}');  
       if (response.statusCode == 200) {
         String local = await CacheHelper.getEventList(url) ?? '';
         print("MD5 Comparator Local for $url : " + local);
