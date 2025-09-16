@@ -145,6 +145,7 @@ class _MyHomePageState extends State<MyHomePage> {
   List<dynamic> salleData = [];
   List<dynamic> profData = [];
   List<dynamic> univData = [];
+  List<dynamic> studentData = [];
 
   Future<void> _loadSettings() async {
     _incrementWebLaunchCount();
@@ -174,12 +175,14 @@ class _MyHomePageState extends State<MyHomePage> {
       fetchJsonData('salle.json'),
       fetchJsonData('prof.json'),
       fetchJsonData('univ.json'),
+      fetchJsonData('student.json'),
     ]);
 
     setState(() {
       salleData = results[0]['salle'];
       profData = results[1]['prof'];
       univData = results[2]['univ'];
+      studentData = results[3]['student'];
     });
   }
 
@@ -321,6 +324,10 @@ class _MyHomePageState extends State<MyHomePage> {
                       SizedBox(
                         width: 400,
                         child: buildDropdownMenu('Professeur', profData, 'prof', this),
+                      ),
+                      SizedBox(
+                        width: 400,
+                        child: buildDropdownMenu('Student', studentData, 'student', this),
                       ),
                       ...univData.map<Widget>((univ) {
                         return Column(

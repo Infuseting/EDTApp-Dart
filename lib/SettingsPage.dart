@@ -236,6 +236,24 @@ class _SettingsPageState extends State<SettingsPage> {
                           style: TextStyle(color: Colors.blue),
                           ),
                         ),
+                        GestureDetector(
+                          onTap: () {
+                          launch('https://github.com/FxBam');
+                          },
+                          child: Text(
+                          'Merci à Arthur Langlois pour son aide',
+                          style: TextStyle(color: Colors.green),
+                          ),
+                        ),
+                        GestureDetector(
+                          onTap: () {
+                          launch('https://github.com/Artax01');
+                          },
+                          child: Text(
+                          'Merci à Artax01 pour son aide',
+                          style: TextStyle(color: Colors.green),
+                          ),
+                        ),
                         SizedBox(height: 8.0),
                         if (kIsWeb) GestureDetector(
                           onTap: () {
