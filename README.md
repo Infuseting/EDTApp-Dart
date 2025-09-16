@@ -2,8 +2,7 @@
 
 The main use of this application is to allow you to create an application for several platforms via a single code. This same application aims to be able to access your schedule in an ultra-simplified way, without connection and to receive notifications in the event of changes.
 
-@FxBam
-
+ [@FxBam](https://github.com/FxBam/) [@Artax01](https://github.com/Artax01/)
 
 ```
 flutter run -d web-server --web-port 8080
