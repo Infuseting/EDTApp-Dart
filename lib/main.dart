@@ -596,7 +596,7 @@ class _MyHomePageState extends State<MyHomePage> {
 Widget buildDropdownMenu(
       String title, List<dynamic> items, String itemType, State state) {
     int itemsToShow = 20;
-    if (title != 'Professeur' && title != 'Salle') {
+    if (title != 'Professeur' && title != 'Salle' && title != 'Student') {
       if (!filterItem(searchText, title)) {
         return Container();
       }
@@ -645,7 +645,7 @@ Widget buildDropdownMenu(
                     children: [
                       ...items
                           .where((item) {
-                            if (title == 'Professeur' || title == 'Salle') {
+                            if (title == 'Professeur' || title == 'Salle' || title == 'Student') {
                               String name = item['descTT'];
                               if (!filterItem(searchText, name)) {
                                 return false;
